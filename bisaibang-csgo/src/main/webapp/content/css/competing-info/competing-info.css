@@ -1,0 +1,61 @@
+.competing-info-register{
+    width: 428px;
+    height: 122px;
+    line-height: 122px;
+    font-size: 54px;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 325px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.competing-info .person-register-wrap{
+    padding-bottom: 60px;
+}
+.competing-info .person-register-title{
+    color: #ffffff;
+}
+.competing-info .person-register{
+    padding: 35px 310px 0 310px;
+}
+.competing-info .team-register{
+    padding-top: 54px;
+}
+.competing-info-btn{
+    text-align: center;
+    padding-top: 18px;
+}
+.competing-info-btn > button{
+    width: 200px;
+    height: 56px;
+    border: 1px solid #5f7579;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 33px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.competing-info-btn > button:nth-of-type(2){
+    margin-left: 30px;
+}
+.competing-info-btn .competing-info-btn-active{
+    background-color: rgba(255,255,255,0.3);
+}
+.competing-info .team-register-btn{
+    width: 205px;
+    height: 45px;
+    display: block;
+    line-height: 45px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #404040;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 25px;
+}

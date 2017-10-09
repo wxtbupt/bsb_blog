@@ -1,0 +1,91 @@
+/* ios bug 修复*/
+/*.modal {*/
+    /*-webkit-overflow-scrolling: auto !important;*/
+    /*overflow-y: auto !important;*/
+/*}*/
+
+/* 模态框 Modal */
+.small-dialog {
+    padding-top: 5%;
+}
+
+.modal-open {
+    padding-right: 0 !important;
+    /*overflow: auto;*/
+}
+
+.modal-content {
+    background-color: #0f0f0f;
+}
+
+.video-dialog {
+    z-index: 1000;
+}
+
+.video-dialog .modal-dialog {
+    min-width: 400px;
+}
+
+@media all and (min-width: 414px) {
+    .small-dialog .modal-dialog {
+        width: 400px;
+        margin: 30px auto;
+    }
+    .ban-pick-dialog .modal-dialog{
+        width: 450px;
+        margin: 30px auto;
+    }
+}
+
+@media all and (min-width: 846px) {
+    .middle-dialog .modal-dialog {
+        width: 750px;
+    }
+}
+
+.modal-backdrop {
+    background: rgba(0, 0, 0, .7);
+}
+
+.close {
+    color: #fff;
+    opacity: .5;
+}
+
+.close:hover, .close:focus {
+    color: #fff;
+    opacity: .8;
+}
+
+.btn-modal:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.video-edit-modal .form-control[readonly] {
+    background-color: #444444;
+    border: 1px solid rgba(255, 255, 255, .1);
+    color: #cccccc;
+}
+/* 查看详情 modal */
+@media all and (min-width: 768px) {
+    .check-detail-dialog .modal-dialog {
+        width: 660px;
+        margin: 30px auto;
+        /*position: fixed;*/
+        position: relative;
+        top: 80px;
+        /*display: inline;*/
+        /*margin-left: -275px;*/
+    }
+    .check-detail-dialog .modal-body{
+        padding: 0 15px 15px 15px;
+        /*top: -50px;*/
+    }
+}
+/* 填写比分 modal */
+@media all and (min-width: 768px) {
+    .edit-score-dialog .modal-dialog {
+        width: 700px;
+    }
+}

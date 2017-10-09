@@ -1,0 +1,234 @@
+/*帖子的样式*/
+.bsb-station-forum-thread{
+    margin: 0 auto;
+    position: relative;
+    display: inherit;
+}
+.forums-nav{
+    height: 50px;
+    line-height: 50px;
+    /*border-bottom: 1px solid #6a6a6a;*/
+}
+.forums-nav a, .forums-nav span:first-child{
+    color:#6a6a6a;
+    font-size: 14px;
+}
+.theme-title-section{
+    height: 130px;
+    display: flex;
+    align-items: center;
+}
+.theme-title{
+    font-size: 24px;
+    color: #000;
+    margin:0;
+}
+.theme-content-container{
+    background-color: #fff;
+    overflow: hidden;
+    border-top: 5px solid #155eb9;
+    padding: 0 40px;
+    width: 75%;
+    display: inline-block;
+}
+.theme-content-right{
+    /*background-color: #363940;*/
+    overflow: hidden;
+    width: 280px;
+    min-height: 200px;
+    margin-left: 15px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    bottom: 4px;
+}
+.theme-content-container h2{
+    color: #000;
+    margin-top: 50px;
+}
+.theme-header{
+    margin-top: 40px;
+    margin-left: 24px;
+}
+.theme-head{
+    margin: 24px 0 0 0;
+}
+.theme-from{
+    color: #000;
+}
+.theme-header img{
+    margin-right: 50px;
+}
+.theme-author{
+    color:#166ad2;
+    margin-right: 30px;
+}
+.theme-published-time{
+    color: #575757;
+}
+.theme-content-center{
+    margin: 10px auto 100px;
+    color:#000;
+    position: relative;
+}
+.theme-content-href{
+    position: absolute;
+    right: 0;
+    color: #166ad2;
+}
+.theme-content p{
+    color: #000;
+    /*padding-bottom: 50px;*/
+}
+.theme-reply-box{
+    width: 638px;
+    height: 50px;
+    border: 1px solid #166ad2;
+}
+.theme-reply-submit{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.theme-reply-submit button{
+    width: 100px;
+    height: 34px;
+    background-color: #166ad2;
+    border:0;
+    box-shadow: inset 0 0 8px #a1c7f5;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+.theme-comments{
+    min-height: 30px;
+}
+.theme-coments-header{
+    height: 30px;
+    color:#0f5bb9;
+}
+.form-content div:last-child{
+    border: 1px solid #166ad2;
+}
+.form-content p{
+    color:#000;
+}
+.theme-comment-item{
+    height: auto;
+    padding-bottom: 15px;
+}
+.theme-comment-author-avatar{
+    width: 34px;
+    height: 34px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+.theme-comment-author{
+    color:#166ad2;
+    display: inline-block;
+}
+
+.theme-head-avatar{
+    margin-right: 20px;
+    vertical-align: top;
+}
+.theme-head-content {
+    width: 90%;
+}
+.theme-comment-create-time{
+    color:#cacaca;
+    display: inline-block;
+    float: right;
+}
+.theme-comment-content p{
+    color:#cdcdcd;
+}
+.theme-comment-content .theme-comment-content-default{
+    text-align: center;
+    margin-top: 30px;
+}
+/*发帖页的样式*/
+.station-forum-create {
+    /*width:1200px;*/
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.station-forum-create .theme-content-container{
+    width: 75%;
+    /*margin-left: 100px;*/
+}
+.forum-create-head{
+    /*margin-left: 100px;*/
+    width: 75%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #6a6a6a;
+}
+.forum-create-head span{
+    color:#fff;
+}
+.forum-create-head a{
+    color:#6a6a6a;
+}
+.station-forum-create .thread-avatar{
+    margin-right: 27px;
+    float: left;
+}
+.station-forum-create #theme-header {
+    height: 30px;
+    width: 450px;
+    margin-left: 10px;
+    border: #000 1px solid;
+}
+.theme-header-content{
+    display: inline-block;
+    margin:0 0 50px 20px;
+}
+.theme-content{
+    /*width:800px;*/
+    /*height: 500px;*/
+}
+.theme-content .form-content div:last-child{
+    height: 440px;
+    overflow: auto;
+    background-color: #fff;
+    border: #000 1px solid;
+}
+.theme-submit{
+    width: 100px;
+    height: 34px;
+    background: linear-gradient(#4a95f2,#256ecb);
+    border: 0;
+    box-shadow: 0 0 3px 2px rgba(255,255,255,.3) inset;
+    display: block;
+    margin: 30px 0 40px 78px;
+    border-radius: 3px;
+}
+.theme-reply textarea{
+    height: 120px;
+    width: 100%;
+}
+.theme-reply p{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.theme-comment-item{
+    padding-top: 10px;
+    border-bottom: 1px solid #eee;
+}
+.theme-comments .theme-comment-item .theme-comment-content{
+    margin-left: 57px;
+    color: #000;
+    word-wrap: break-word;
+}
+.theme-coments-header{
+    padding-top: 6px;
+    background-color: #f4f4f4;
+}
+.theme-content-container label{
+    color: #000;
+}

@@ -1,0 +1,491 @@
+/*
+    小站主页CSS文件
+    使用范围，station-main-admin,viewer.html
+*/
+
+/*小站广告容器*/
+.station-adv-wrapper {
+    width: 24%;
+    height: 520px;
+    background-color: #f9f8f8;
+    margin-top: 25px;
+    border-radius: 2px;
+}
+
+.station-adv {
+    /*background-color: blue;*/
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 300px;
+}
+
+.station-adv-div {
+    height: 300px;
+    width: 79%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    border: 1px solid #6e6e6e;
+    color: #6e6e6e;
+}
+
+.station-adv-img {
+    width: 100%;
+    height: 300px;
+}
+
+.station-organizer-wrapper {
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.station-organizer-wrapper * {
+    margin-left: 5%;
+    width: 90%;
+    color: #000;
+}
+
+.station-member-dynamic-wrapper {
+    /*background-color: red;*/
+    margin-top: 30%;
+    margin-left: 5%;
+    width: 90%;
+    height: 600px;
+
+}
+
+.station-member-dynamic-header {
+    font-size: 18px;
+    color: #000;
+}
+
+.station-member-dynamic {
+
+}
+
+.station-info-wrapper {
+    width: 75%;
+    background-color: #f9f8f8;
+    min-height: 370px;
+    margin-top: 25px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/*小站信息头部*/
+.station-info-header-wrapper {
+    height: 118px;
+    margin-bottom: 20px;
+    background: url("/content/images/station/station-info-header.png") no-repeat center;
+    /*background-size: 101%;*/
+    border-top: 1px solid #185eb6;
+    box-shadow: 0px 5px 5px rgba(198, 198, 198, 0.42);
+    border-radius: 2px;
+}
+
+.station-info-header {
+    position: relative;
+    display: block;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.station-info-header-avatar-wrapper {
+    display: inline-block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.station-info-header-avatar {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.station-info-header-name-wrapper {
+    float: left;
+    color: #e6e6e6;
+}
+.station-info-header-name-wrapper div {
+    color: #e7e7e7;
+}
+.station-info-header-name {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.station-info-follow-btn-wrapper {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+}
+.station-info-follow-icon {
+    background: url("/content/images/station/station-follow.png") no-repeat center;
+}
+.station-info-follow-btn {
+    float: left;
+    display: inline-block;
+    background-color: #fe4482;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    margin-right: 1px;
+}
+.station-info-follow-btn-two {
+    float: left;
+    display: inline-block;
+    background-color: #166ad2;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    margin-right: 1px;
+}
+
+.station-info-manage-btn-wrapper {
+    position: absolute;
+    display: inline-block;
+    right: 210px;
+}
+
+.station-info-manage-btn {
+    height: 36px;
+    line-height: 36px;
+    width: 120px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    background-color: #166ad2;
+    border-radius: 2px;
+}
+
+.station-info-manage-btn .glyphicon {
+    top: 2px;
+}
+
+.station-info-fans {
+    float: left;
+    display: inline-block;
+    background-color: #166ad2;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+/*小站信息-主体*/
+.station-info-all-wrapper {
+    width: 93%;
+    margin: 0 auto;
+}
+
+/*小站信息-简介*/
+.station-info-intro-wrapper {
+    height: 40px;
+    color: #000000;
+    font-weight: 500;
+    background: url("/content/images/station/station-info-intro.png") no-repeat center;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+/*小站信息-组织比赛  粉丝数*/
+.station-info-two {
+    height: 100px;
+    line-height: 100px;
+    font-size: 16px;
+    color: #000;
+}
+
+.station-info-two-num-wrapper {
+    margin-left: 45px;
+    font-size: 14px;
+    color: #606060;
+}
+
+.station-info-two-num {
+    color: #606060;
+    margin-left: 10px;
+}
+
+/*小站信息-公告*/
+.station-info-notice-header {
+    height: 40px;
+    line-height: 40px;
+}
+
+.station-info-notice-title {
+    display: inline-block;
+    text-align: center;
+    height: 12px;
+    line-height: 12px;
+    font-size: 16px;
+    width: 50px;
+    color: #000;
+    border-left: 2px solid #166ad2;
+    border-right: 2px solid #166ad2;
+}
+
+.station-info-notice-time {
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    color: #a3a3a3;
+}
+
+.station-info-notice {
+    height: auto;
+    background-color: #f3f2f2;
+}
+
+.station-info-notice-view {
+    color: #000;
+    padding: 16px 15px 57px 15px;
+    /*max-height: 150px;*/
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.notice-view-height {
+    max-height: 150px;
+}
+
+.station-info-notice-view-content {
+    overflow: hidden;
+}
+
+.station-info-notice-view-content * {
+    color: #403f3f;
+}
+
+.notice-view-content-height {
+    max-height: 73px;
+    word-wrap: break-word;
+}
+
+.notice-view-all {
+    height: 100%;
+}
+
+.notice-view-all .station-info-notice-view-content {
+    height: 100%;
+    overflow: inherit;
+}
+
+/*小站信息-查看全部*/
+.station-info-notice-all {
+    font-size: 14px;
+    float: right;
+    margin-top: -88px;
+    margin-right: 20px;
+    color: #fe4482;
+    z-index: 10;
+}
+
+/*小站赛事*/
+.station-tournament-wrapper {
+    width: 75%;
+    min-height: 280px;
+    background-color: #f9f8f8;
+    margin-top: 10px;
+    border-top: 5px solid #166ad2;
+    border-bottom: 5px solid #166ad2;
+    border-radius: 2px;
+    padding-bottom: 50px;
+
+}
+
+/*小站赛事-头部*/
+.station-tournament-header {
+    height: 90px;
+    line-height: 90px;
+    width: 93%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/*小站赛事-头部-标题*/
+.station-tournament-title {
+    font-size: 18px;
+    display: inline-block;
+    float: left;
+    color: #166ad2;
+
+}
+
+.station-tournament-icon-wrapper {
+    display: inline;
+    vertical-align: middle;
+}
+
+.station-tournament-icon-wrapper .station-tournament-icon {
+    margin-bottom: 7px;
+}
+
+/*小站赛事-主体*/
+.station-tournament-all {
+    float: right;
+    font-size: 14px;
+    display: inline-block;
+    color: #166ad2;
+}
+
+.station-tournament-list-wrapper {
+    width: 93%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.station-tournament-list-no {
+    margin-top: 30px;
+}
+/*小站赛事-推荐卡片*/
+.station-tournament-card {
+    width: 89%;
+    height: 120px;
+    background: linear-gradient(#ffffff, #e7e5e5);
+    transition: box-shadow 100ms, margin-top 100ms;
+    border-radius: 2px;
+    position: relative;
+    outline: none;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.station-tournament-card-wrapper {
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+    height: 135px;
+    overflow: hidden;
+    outline: none;
+}
+
+.station-tournament-card:hover {
+    box-shadow: 10px 10px 10px rgba(84, 84, 84, .25);
+    margin-top: 0;
+}
+
+/*首页动态-赛事-卡片*/
+.station-home-tournament-card-wrapper {
+    overflow: hidden;
+    height: 135px;
+    margin: 5px 20px  20px 100px;
+}
+
+.station-home-tournament-card-wrapper .station-tournament-card {
+    width: 98%;
+}
+/*小站赛事-头像*/
+.station-tournament-avatar-wrapper {
+    float: left;
+    width: 60px;
+    margin-left: 20px;
+    margin-right: 18px;
+    padding: 16px 0px;
+    text-align: center;
+}
+.station-tournament-avatar-wrapper .tournament-game-icon {
+    border: 2px solid #166ad2;
+}
+.station-tournament-avatar-icon {
+    width: 56px;
+}
+
+.station-tournament-game-name {
+    display: inline-block;
+    font-size: 12px;
+    color: #797878;
+    margin-top: 12px;
+}
+
+/*小站赛事-比赛信息*/
+.station-tournament-info-wrapper {
+    font-size: 14px;
+    float: left;
+    margin-top: 15px;
+}
+.station-tournament-name {
+    font-size: 18px;
+    color: #166ad2;
+}
+
+.station-tournament-type {
+    font-size: 14px;
+    color: #575757;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.station-tournament-time {
+    font-size: 12px;
+    color: #575757;
+}
+
+/*小站赛事-按钮*/
+/*.station-tournament-apply-wrapper {
+    float: right;
+    margin-right: 24px;
+    margin-top: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}*/
+.station-tournament-apply-num {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    color: #166ad2;
+}
+.station-tournament-apply-num div {
+    border-color: #166ad2;
+}
+.station-tournament-apply-btn{
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    margin-right: 10px;
+    color: #fe4482;
+}
+.station-tournament-apply-btn-top {
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: 10px;
+    border: 1px solid #fe4482;
+    border-bottom: none;
+}
+.station-tournament-apply-btn-bottom {
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    height: 10px;
+    border: 1px solid #fe4482;
+    border-top: none;
+}
+.station-tournament-apply-wrapper {
+    position: absolute;
+    right: 24px;
+    top: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+

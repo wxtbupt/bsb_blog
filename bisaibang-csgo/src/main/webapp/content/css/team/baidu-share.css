@@ -1,0 +1,53 @@
+#baidu_share .bds_tsina{
+    background-image: url(/content/images/icon/weibo.png);
+}
+#baidu_share .bds_sqq{
+    background-image: url(/content/images/icon/qqchat.png);
+}
+#baidu_share .bds_weixin{
+    background-image: url(/content/images/icon/wechat.png);
+}
+#baidu_share a{
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 4px;
+    background-position: 0 0;
+    height: 30px;
+    width: 30px;
+}
+
+#baidu_share {
+    width: 130px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+
+#team_share .bds_tsina{
+    background-image: url(/content/images/icon/weibo.png);
+}
+#team_share .bds_sqq{
+    background-image: url(/content/images/icon/qqchat.png);
+}
+#team_share .bds_weixin{
+    background-image: url(/content/images/icon/wechat.png);
+}
+#team_share a{
+    margin: 0 5px;
+    border-radius: 4px;
+    background-position: 0 0;
+    height: 30px;
+    width: 30px;
+}
+
+#team_share {
+    width: 120px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+baidu-share {
+    display: block;
+}

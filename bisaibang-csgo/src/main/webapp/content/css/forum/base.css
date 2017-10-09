@@ -1,0 +1,220 @@
+/*小站的论坛样式*/
+.outsource-forum{
+    margin: 10px 0 120px 0;
+    width: 75%;
+}
+.outsource-forum .container{
+    width: 100%;
+    background-color: #fff;
+    padding: 0 25px;
+    border-bottom: 5px solid #166ad2;
+    border-top: 5px solid #166ad2;
+    border-radius: 2px;
+}
+.outsource-forum div{
+    color:dodgerblue;
+}
+.forums-general-header{
+    height: 90px;
+    line-height: 90px;
+    position: relative;
+}
+
+.forums-general-header-admin{
+    /*height: 100px;*/
+    padding: 20px 0;
+}
+.forums-general-title{
+    font-size: 18px;
+    color: #000;
+}
+.forums-general-header-admin .forums-general-title{
+    color:#000;
+    margin: 20px 0;
+}
+.forums-theme-post-btn{
+    width: 84px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background: linear-gradient(#ff8eb3,#f43473);
+    box-shadow: 0 0 3px 2px rgba(255,255,255,.3) inset;
+    margin: auto 40px;
+    outline: none;
+}
+.forums-theme-post-btn span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+.forums-btn-red{
+    background: linear-gradient(#ff8eb3,#f43473);
+    box-shadow: 0 0 3px 2px rgba(255,255,255,.3) inset;
+}
+.forums-btn-blue{
+    background: linear-gradient(#4a95f2,#256ecb);
+    box-shadow: 0 0 3px 2px rgba(255,255,255,.3) inset;
+}
+.forums-theme-btn div{
+    width: 84px;
+    height: 30px;
+    display: inline-block;
+    /*font-size: 16px;*/
+    color:#fff;
+    text-align: center;
+    line-height: 30px;
+}
+.form-container table{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.outsource-forum .form-general-content-header{
+    background-color: #166ad2;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    border: none;
+}
+.form-general-content-header .forums-col-title{
+    border-top-left-radius: 2px;
+    border-bottom-left-radius:2px;
+}
+.form-general-content-header .forums-col-date{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius:2px;
+}
+.form-general-content-header div{
+    display: inline-block;
+    color:#fff;
+}
+.form-container tr{
+    border-bottom: 1px solid #166ad2;
+    height: 40px;
+}
+.form-container td{
+    padding-left: 5px;
+}
+.forums-col-title{
+    width: 500px;
+    padding: 0;
+}
+.forums-col-author{
+    width: 140px;
+    padding: 0;
+}
+.forums-col-reply{
+    width: 100px;
+    padding: 0;
+}
+
+/**/
+.forums-col-reply .article-reply{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.forums-col-reply .article-reply i{
+    position: absolute;
+    left: 25px;
+    top: 4px;
+}
+
+
+.forums-col-date{
+    width: 130px;
+    padding: 0;
+}
+.article-title{
+    cursor: pointer;
+}
+tbody .forums-col-author, tbody .forums-col-reply, tbody .forums-col-date{
+    color: #000;
+}
+.forums-page-selection{
+    height: 50px;
+    text-align: center;
+}
+.selection-container{
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    height: 50px;
+}
+.selection-container button, .page-number{
+    background-color: #166ad2;
+    border: 0;
+    color: #fff;
+}
+.selection-container span{
+    display: inline-block;
+    width: 20px;
+}
+.page-input{
+    display: inline-block;
+    color:#000
+}
+.page-input input{
+    width: 20px;
+}
+.forum-head{
+    height: 50px;
+    line-height: 50px;
+}
+.forum-title{
+    font-size: 24px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    color: #000;
+}
+.theme-header{
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-left: 36px;
+}
+#theme-header{
+    height: 30px;
+    width: 450px;
+}
+.thread-avatar{
+    width: 50px;
+    height:50px;
+    /*background-image: url('/content/images/bsb/bsb-171-2.svg');*/
+}
+
+.outsource-forum .form-container{
+    width: auto;
+}
+.outsource-forum .outsource-forum div{
+    color: transparent;
+}
+/*移植后覆盖的样式*/
+.outsource-forum .forums-general-header{
+    padding: 0;
+}
+.outsource-forum .form-general-content{
+    background-color: rgba(255,255,255,1);
+     font-size: inherit;
+}
+.outsource-forum .form-container{
+    width: auto;
+}
+.outsource-forum .form-general-content .article-reply{
+    text-align: center;
+}
+.outsource-forum .form-general-content .article-title.isTop{
+    color: #f00;
+}
+.outsource-forum .form-general-content .article-title{
+    height: 40px;
+    color: #2f78ea;
+}
+.outsource-forum .form-general-content .article-item{
+    line-height: 40px;
+}
+

@@ -1,0 +1,156 @@
+.forums-content{
+    background-image: url(/content/images/forums/bg.jpg);
+}
+
+.form-container {
+    width: 1200px;
+}
+
+.forums-content-item{
+    height: 280px;
+    max-width: 1200px;
+    margin-top:20px;
+    margin-bottom:15px;
+}
+
+.forums-content-item .item-picture{
+    /*background-color: rgba(255,255,255,.05);*/
+    height: 270px;
+    width: 477px;
+    margin-left:10px;
+    margin-top:10px;
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.forums-content-item .picture1{
+    background-image: url(/content/images/forums/01.png) ;
+}
+.forums-content-item .picture2{
+    background-image: url(/content/images/forums/02.png) ;
+}
+
+.forums-content-item .picture3{
+    background-image: url(/content/images/forums/03.png) ;
+}
+
+.forums-content-item .item-body {
+    height: 280px;
+    width: 1200px;
+
+}
+
+
+.forums-content-item .item-body-container{
+    text-align: left;
+    margin-left: 400px;
+}
+
+.forums-content-item .item-body p{
+    font-size: 24px;
+    color:#ec9f24;
+    margin-top:65px;
+    margin-bottom:28px;
+}
+
+.forums-content-item .item-body span {
+    font-size: 16px;
+}
+
+
+.forums-theme-reply-btn-wrapper {
+    position: relative;
+    padding-left: 66px;
+    outline: none;
+    text-decoration: none;
+}
+
+.forums-theme-reply-btn-wrapper .ow-fly-chicken {
+    position: absolute;
+    left: 0;
+    top: -48px;
+    width: 110px;
+    height: 110px;
+    background-image: url(/content/images/forums/ow-fly-chicken.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.forums-theme-reply-btn-wrapper .forums-theme-reply-btn {
+    width: 130px;
+    height: 40px;
+    transform: skew(-30deg,0deg);;
+}
+
+.forums-theme-reply-btn-text {
+    color: #fff;
+    left: 120px;
+    line-height: 40px;
+     transform: skew(30deg,0deg);
+}
+
+.forums-search-thread-btn {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(/content/images/forums/sousuo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: contain;
+}
+
+.forums-row {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: table;
+    clear: both;
+}
+
+.forums-col-title {
+    width: 526px;
+    padding: 0 15px;
+}
+
+.forums-col-author {
+    width: 174px;
+    padding: 0 15px;
+}
+
+.forums-col-reply {
+    width: 100px;
+    padding: 0 15px;
+}
+
+/*.forums-col-view {*/
+    /*width: 100px;*/
+    /*float: left;*/
+    /*padding: 0 15px;*/
+/*}*/
+
+.forums-col-reply-name {
+    width: 174px;
+    padding: 0 15px;
+}
+
+.forums-col-date {
+    width: 226px;
+    padding: 0 15px;
+}
+
+.article-reply-name {
+    color: #2f78ea;
+}
+
+/* 用这个嵌套home-menu防鬼畜 */
+.form-home-menu {
+    height: 60px;
+}
+
+.forums-container {
+    position: relative;
+    background: url(/content/images/forums/bj.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 768px;
+}

@@ -1,0 +1,439 @@
+/*队长报名页面css*/
+.participant-team-content label span{
+    font-size: 20px;
+    font-weight: 400;
+}
+.participant-header, .register-label{
+    color: #fff;
+}
+.participant-header{
+    color: #fff;
+    font-size: 24px;
+}
+.participant-header-team{
+    color: #fff;
+    font-size: 30px;
+    font-style: italic;
+}
+.team-info{
+    height: 180px;
+}
+.register-teammate-info{
+    margin-top: 44px;
+}
+
+/*input样式*/
+.participant-team-content .form-control{
+    display: inline-block;
+    width: 300px;
+    height: 30px;
+    color: #000;
+    background-color: #fff;
+}
+/*具体报名卡片*/
+.participant-card{
+    width: 353px;
+    height: 465px;
+    background: url(/content/images/participant/card-1.png)  no-repeat;
+    background-size: 100%;
+    margin: 20px;
+    position: relative;
+}
+.participant-card-captain{
+    width: 353px;
+    height: 465px;
+    background: url(/content/images/participant/card-2.png)  no-repeat;
+    background-size: 100%;
+    margin: 20px;
+    position: relative;
+}
+.participant-card-reverse{
+    margin-top: 50px;
+    width: 546px;
+    height: 190px;
+    background: url(/content/images/participant/tibu.png)  no-repeat;
+}
+.participant-card:nth-child(1) {
+    margin-left: 0;
+}
+.register-info.info-edit-maininfo{
+    padding: 0;
+}
+.register-table {
+    margin: 0 auto;
+    /* table-layout: fixed; */
+    float: left;
+    width: 1030px;
+}
+/*报名卡片 每一行的定位*/
+.participant-card span, .participant-card-reverse span{
+    /*position: absolute;*/
+    color: #fff;
+}
+.participant-card span a{
+    display: inline-block;
+}
+.participant-card .id-card, .participant-card .id-game, .participant-card .email, .participant-card .name, .participant-card .phone{
+    text-align: center;
+    margin-top: 15px;
+    position: relative;
+    /*top: 50px;*/
+    /*left: 120px;*/
+}
+.participant-card .id-card{
+    left: 20px;
+}
+.participant-card .id-game{
+    left: 10px;
+}
+.participant-card .email{
+    left: 0px;
+}
+.participant-card .name{
+    left: -10px;
+    display: block;
+    /*margin-top: 50px;*/
+}
+.participant-card .phone{
+    left: -20px;
+    display: block;
+    margin-top: 20px;
+}
+.editable-controls .form-control{
+    width: 150px;
+}
+
+
+.register-info {
+    /*overflow-x: auto;*/
+}
+/*@media (min-width: 992px){
+    .register-info {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}*/
+/*.register-info .table tr{*/
+/*height:109px;*/
+/*}*/
+.register-info .table td, .register-info .table th {
+    border: none;
+    vertical-align: inherit;
+    padding: 0;
+}
+.register-info .table td, .register-info .table th {
+    border: 1px solid #4a505f;
+    background-color: #21242b;
+    white-space: nowrap;
+}
+
+.participant-team-content {
+    padding: 30px 0;
+    /*background: url(/content/images/participant/1212.jpg)  no-repeat;*/
+    background: url(/content/images/participant/background.jpg)  no-repeat;
+    background-size: cover;
+}
+.participant-sishen{
+    width: 435px;
+    height: 555px;
+    background: url(/content/images/participant/sishen.png) no-repeat;
+    position: absolute;
+    right: 100px;
+    z-index: -1;
+    top: 50px;
+}
+
+.register-header-label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 34px;
+}
+.register-info table .reserve-player td{
+    height: 40px;
+}
+.editable-wrap.editable-text .editable-controls input{
+    color: #000;
+}
+
+.register-header-span{
+    color: #FF442A;
+    position: relative;
+    left: 40px;
+}
+/*select*/
+.editable-wrap.editable-select .editable-controls select{
+    color: #000;
+}
+.text-center .register-header-label select{
+    display: block;
+}
+
+
+.register-header-label-warn{
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .register-header-label select{
+        display: inline-block;
+    }
+    .register-check{
+        position: relative;
+        left: -20px;
+    }
+
+}
+.ow-register-submit{
+    /*margin: 30px 0;*/
+    width: 680px;
+    height: 64px;
+    color: #543102;
+    border-radius: 5px;
+    background-color: #ffe603;
+    font-size: 34px;
+    border: none;
+}
+.ow-register-submit:hover{
+    color: white;
+}
+/*.editable-buttons{
+    position: absolute;
+    top: 0px;
+    right: 0;
+}*/
+.register-check{
+    position: relative;
+    left: -150px;
+    width: 80px;
+    height: 30px;
+    background-color: orange;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    line-height: 0;
+}
+
+
+/*替补*/
+.participant-card-reverse .blue{
+    position: absolute;
+    top: 30px;
+    right: 105px;
+    font-size: 20px;
+}
+.participant-card-reverse .id-card,.participant-card-reverse .id-game,.participant-card-reverse .email,.participant-card-reverse .name,.participant-card-reverse .phone{
+    position: relative;
+    height: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.participant-card-reverse .id-card{
+    left: 50px;
+}
+.participant-card-reverse .id-game{
+    left: 45px;
+}
+.participant-card-reverse .email{
+    left: 40px;
+}
+.participant-card-reverse .name{
+    left: 35px;
+}
+.participant-card-reverse .phone{
+    left: 30px;
+}
+
+/*警告--检查队名*/
+.register-submit-check-span{
+    color: #FF442A;
+    position: relative;
+    display: block;
+    margin-top: 20px;
+}
+/*警告--小队人数*/
+.register-submit-count-span{
+    color: #FF442A;
+    position: relative;
+    display: block;
+}
+/*新的input*/
+.input-group.fix-width {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+.participant-card .input-group.fix-width input{
+    width: 180px;
+    left: 20px;
+    font-size: 14px;
+    margin-top: 0;
+    font-weight: 100;
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #ddd;
+}
+.input-group.fix-width a, .input-group.fix-width h4 {
+    font-size: 14px;
+    margin-top: 4px;
+    display: inline-block;
+    margin-bottom: 3px;
+    height: 23px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ddd;
+    /*font-style: italic;*/
+    border-bottom: dashed 1px #428bca;
+}
+.participant-card button.team-self-right {
+    background: url(/content/images/team-yes.png) 50% no-repeat;
+}
+.participant-card button.team-self-wrong {
+    background: url(/content/images/team-no.png) 50% no-repeat;
+}
+.participant-card button {
+    border: 0;
+}
+.participant-card .input-group-btn {
+    position: absolute;
+    right: 20px;
+    width: auto;
+    top: -2px;
+    z-index: 3;
+}
+/*.info-edit-maininfo button {
+    width: 30px;
+    height: 26px;
+    outline: none;
+}*/
+
+
+
+.participant-card-reverse .input-group.fix-width {
+    width: 100%;
+    display: inline;
+    position: relative;
+}
+.participant-card-reverse .input-group.fix-width a, .input-group.fix-width h4 {
+    font-size: 14px;
+    margin: 0;
+    display: inline-block;
+    height: 18px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ddd;
+    /*font-style: italic;*/
+    border-bottom: dashed 1px #428bca;
+}
+.participant-card-reverse .input-group.fix-width input{
+    width: 180px;
+    font-size: 14px;
+    margin-top: 0;
+    font-weight: 100;
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #ddd;
+    height: 26px;
+    float: none;
+}
+.participant-card-reverse button.team-self-right {
+    background: url(/content/images/team-yes.png) 50% no-repeat;
+}
+.participant-card-reverse button.team-self-wrong {
+    background: url(/content/images/team-no.png) 50% no-repeat;
+}
+.participant-card-reverse button {
+    border: 0;
+}
+.participant-card-reverse .input-group-btn {
+    position: absolute;
+    right: -10px;
+    width: auto;
+    top: -8px;
+    z-index: 3;
+}
+.is-team-tips.row{
+    min-height: 600px;
+}
+.is-team-tips-header{
+    color: #ddd;
+}
+.check-team-info{
+    width: 189px;
+    height: 50px;
+    background-color: #f8931f;
+    border: 0px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    transform: skewX(-15deg);
+    display: table;
+    margin: 50px auto;
+}
+/**/
+.register-teammate-info i{
+    display: inline-block;
+    width: 300px;
+    border-top: 2px solid #fff;
+    top: -10px;
+    position: relative;
+    margin: 0 15px;
+}
+.add-player {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background-color: orange;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    line-height: 0;
+}
+.participant-card, .participant-card-captain {
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    padding: 55px 22px 0 38px;
+}
+.participant-card p,.participant-card-captain p{
+    margin-bottom: 32px;
+}
+.participant-card .blue-word,.participant-card-captain .blue-word{
+    color: #fff;
+    font-size: 24px;
+    margin: 8px 0 0 45px;
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+}
+.participant-card .divide-row,.participant-card-captain .divide-row{
+    margin-bottom: 2px;
+}
+
+.participant-delete-player {
+    /*background: url("/content/images/participant/x.png");*/
+    background-size: 100%;
+    background: transparent;
+    /*font-weight: bold;*/
+    position: relative;
+    left: -50px;
+    top: -20px;
+}
+.no{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 150px;
+    height: 150px;
+    background: url("/content/images/participant/nonono.png");
+}

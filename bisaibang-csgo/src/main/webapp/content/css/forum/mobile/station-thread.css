@@ -1,0 +1,167 @@
+/*帖子详情页移动端*/
+.bsb-station-forum-thread-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .bsb-station-forum-thread-mobile {
+        min-height: 94vh;
+    }
+    .bsb-station-forum-thread {
+        display: none;
+    }
+
+    .bsb-station-forum-thread-mobile {
+        /*min-height: 1000px;*/
+        position: relative;
+        display: inherit;
+        background-color: #fff;
+    }
+
+    .bsb-station-forum-thread-header-mobile {
+
+    }
+
+    .forum-thread-title-mobile {
+        margin-left: 5vw;
+        padding-top: 3.1vh;
+        color: #4a4a4a;
+        font-size: 20px;
+        font-family: "Microsoft YaHei";
+    }
+
+    .station-forum-thread-info-wrapper-mobile {
+        margin: 2.6vh 4.2vw 2.9vh 5vw;
+    }
+    .station-forum-thread-avatar-mobile {
+        vertical-align: top;
+        width: 45px;
+        height: 45px;
+    }
+    .station-forum-thread-info-mobile {
+        display: inline-block;
+        margin-left: 1.3vw;
+        font-family:"Microsoft YaHei UI";
+    }
+
+    .station-forum-thread-author-mobile {
+        color: #1d6ccb;
+        font-size: 15px;
+        margin-bottom: 0.7vh;
+    }
+    .station-forum-thread-time-mobile {
+        color: #929292;
+    }
+    .bsb-station-forum-thread-content-mobile {
+        margin: 2.2vh 4.2vw;
+    }
+    .bsb-station-forum-thread-content-mobile p {
+        color: #4a4a4a;
+        font-size: 15px;
+        font-family: "Microsoft YaHei UI";
+    }
+    .station-theme-comments-mobile {
+        border-top: 9px solid #eeeeee;
+        padding-left: 4.2vw;
+        padding-right: 4.5vw;
+        margin-bottom: 7.8vh;
+
+    }
+    .station-theme-comments-header-mobile {
+        height: 4.5vh;
+        width: 16.5vw;
+        font-size: 15px;
+        margin-top: 2.2vh;
+        margin-bottom: 0.7vh;
+        border-bottom: 2px solid #1d6ccb;
+        color: #4a4a4a;
+        white-space: nowrap;
+    }
+    .station-theme-comments-card-mobile {
+        height: auto;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .station-theme-comments-card-header-mobile {
+        font-size: 15px;
+        line-height: 4vh;
+        height: 4vh;
+        margin-top: 2.2vh;
+    }
+    .station-theme-comments-card-avatar-mobile {
+        width: 7.2vw;
+        vertical-align: top;
+    }
+    .station-theme-comments-card-author-mobile {
+        color: #1d6ccb;
+        display: inline-block;
+        margin-left: 2.4vw;
+    }
+    .station-theme-comments-card-time-mobile {
+        color: #929292;
+        float: right;
+    }
+    .station-theme-comments-card-content-mobile {
+        color: #4a4a4a;
+        margin-top: 0.6vh;
+        margin-bottom: 2.2vh;
+        margin-left: 10.7vw;
+        word-wrap: break-word;
+    }
+
+
+    .station-theme-reply-mobile {
+        position: relative;
+        background-color: #eeeeee;
+        height: 7.9vh;
+    }
+    .station-forum-input-mobile {
+        height: 5.2vh;
+        width: 91.7vw;
+        border-radius: 2.5px;
+        border: none;
+        padding-left: 1.3vw;
+        padding-right: 16vw;
+        font-size: 14px;
+        color: #000;
+        background-color: #fff;
+        outline: none;
+        margin: 1.2vh 4vw;
+    }
+
+    .station-forum-reply-mobile {
+        position: absolute;
+        width: 15.7vw;
+        height: 4.3vh;
+        right: 5vw;
+        top: 1.5vh;
+        overflow: hidden;
+        border-radius: 2.5px 6px 3px 5px;
+    }
+    .station-forum-reply-btn-mobile {
+        transition: width .5s;
+        -moz-transition: width .5s;
+        -webkit-transition: width .5s;
+        -o-transition: width .5s;
+        width: 16.5vw;
+        height: 4vh;
+        transform: skew(-18deg);
+        position: relative;
+        left: 3.7vw;
+        top: 2px;
+        border-radius: 2px 14px 12px 5px;
+        background-color: #166ad2;
+        border: none;
+    }
+    .station-forum-reply-btn-mobile span {
+        display: inline-block;
+        transform: skew(18deg);
+        margin-left: -3.6vw;
+        /*margin-top: 2px;*/
+    }
+    .station-theme-reply-mobile-wrapper {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+    }
+
+}

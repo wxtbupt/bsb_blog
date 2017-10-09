@@ -1,0 +1,173 @@
+.rule-competition, .rule-rules{
+    background: url('/content/images/rule/bj-7.jpg') no-repeat;
+    background-position-x: center;
+    background-size: 100% 100%;
+    /*height: 3200px;*/
+    /*overflow: hidden;*/
+    margin-top:-62px;
+    padding: 230px 0;
+}
+@media(min-width: 1500px){
+    .rule-competition,  .rule-rules{
+        /*height: 4000px;*/
+    }
+    .rule-time-header{
+        height: 75px;
+    }
+}
+@media(min-width: 1900px){
+    .rule-competition, .rule-rules{
+        /*height: 5000px;*/
+    }
+}
+/*.rule-rules{*/
+    /*background-image: url('/content/images/rule/rule-tab2.jpg');*/
+/*}*/
+.rule-time-header{
+    width: 50%;
+    height: 70px;
+    background: url('/content/images/rule/header.png') no-repeat;
+    background-size: 100% 100%;
+    margin: 150px auto 0;
+}
+.rule-time-content{
+    background: url('/content/images/rule/game-time.png') no-repeat;
+    background-size: 100%;
+    width: 400px;
+    height: 100px;
+    margin: 50px auto;
+}
+.rule-tabs{
+    width: 1002px;
+    height: 70px;
+    text-align: center;
+    border-bottom: 4px solid #fff;
+    margin: 0 auto 83px;
+}
+.rule-tab1-active, .rule-tab2, .rule-tab2-active, .rule-tab1{
+    background: url('/content/images/rule/btn1.png') no-repeat;
+    background-size: 100%;
+    width: 250px;
+    height: 70px;
+    display: inline-block;
+    outline: none;
+}
+.rule-tab2{
+    background-image: url('/content/images/rule/anniu3.png');
+}
+.rule-tab1{
+    background-image: url('/content/images/rule/btn2.png');
+}
+.rule-tab2-active{
+    background-image: url('/content/images/rule/anniu4.png');
+}
+.game-system{
+    width: 1002px;
+    margin: 0 auto;
+}
+/*三角形*/
+.triangle{
+    display: inherit;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid red;
+    border-bottom: 5px solid transparent;
+}
+
+.rule-content{
+    width: 1002px;
+    margin: 0 auto;
+}
+.rule-show{
+    display: none;
+}
+.game-system .game-system-item,.rule-content .game-system-item{
+    line-height: 47px;
+    margin-bottom: 0;
+}
+.game-system .game-system-item .system-rule,.rule-content .game-system-item .system-rule,.rule-content-item,.game-system-item.to-right{
+    font-size:24px;
+    display: inline-block;
+    /*font-style: italic;*/
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+    transform: skew(-10deg);
+}
+.rule-content-item{
+    margin-top: 45px;
+}
+.game-system .game-system-item .system-icon,.rule-content .game-system-item .system-icon{
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    margin-left: 6px;
+    margin-right: 26px;
+}
+.game-system .game-system-item .system-icon img,.rule-content .game-system-item .system-icon img{
+    overflow: hidden;
+    margin-top:-6px;
+    width: 30px;
+    height: 30px;
+}
+.game-system-item.game-system-btn{
+    margin: 37px 0;
+    line-height: 55px;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    color: #0068b7;
+    border: 2px solid #0068b7;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.rule-content .rule-content-btn{
+    background-color: #353c7b;
+    color: #fff;
+    border:none;
+}
+.rule-content-next{
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 65px;
+}
+.game-system-img{
+    margin-top:43px;
+}
+.game-system-img img{
+    width: 440px;
+}
+.game-system-img.left{
+    margin-left:110px;
+}
+.game-system-item.blue,.system-rule.blue{
+    color: #0068b7;
+    margin-top: 55px;
+}
+/*.game-system-item.top{*/
+    /*margin-top: 81px;*/
+/*}*/
+.game-system ol li{
+    font-size:24px;
+    font-style: italic;
+    margin-left: 70px;
+    line-height: 47px;
+}
+.tips{
+    font-size: 24px;
+    font-style: italic;
+    margin-left: 35px;
+    /*margin-bottom: 290px;*/
+}
+.game-system-item.to-right{
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+/*.game-system-item.to-right-n{*/
+    /*margin-bottom: 65px;*/
+/*}*/
+

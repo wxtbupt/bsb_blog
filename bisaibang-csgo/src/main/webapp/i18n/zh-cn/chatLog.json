@@ -1,0 +1,24 @@
+{
+    "bsbmsoneApp": {
+        "chatLog" : {
+            "home": {
+                "title": "Chat Logs",
+                "createLabel": "Create a new Chat Log",
+                "createOrEditLabel": "Create or edit a Chat Log",
+                "search": "Search for Chat Log"
+            },
+            "created": "A new Chat Log is created with identifier {{ param }}",
+            "updated": "A Chat Log is updated with identifier {{ param }}",
+            "deleted": "A Chat Log is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Chat Log {{ id }}?"
+            },
+            "detail": {
+                "title": "Chat Log"
+            },
+            "message": "Message",
+            "toWhom": "To Whom",
+            "fromWhom": "From Whom"
+        }
+    }
+}

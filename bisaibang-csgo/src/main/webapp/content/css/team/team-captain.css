@@ -1,0 +1,239 @@
+.team-captain-header {
+    color: white;
+    background-image: url(/content/images/rule/team-header.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.team-captain-header-content {
+    width: 1022px;
+    margin: 0 auto;
+    padding-top: 108px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.team-captain-nav > span {
+    display: inline-block;
+    width: 142px;
+    text-align: center;
+}
+
+.team-captain-nav > span:nth-of-type(4) {
+    border-bottom: 4px solid white;
+}
+
+.team-captain-title {
+    font-size: 60px;
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(236, 240, 243, 1)), to(rgba(251, 223, 124, 1)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.team-captain-share {
+    margin-top: 20px;
+}
+
+.team-captain-share-address {
+    width: 440px;
+    height: 30px;
+    padding-left: 10px;
+    margin-top: 30px;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    outline: none;
+}
+
+.team-captain-explain {
+    margin-top: 40px;
+}
+
+.team-captain-content-content {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 350px;
+    text-align: center;
+}
+
+.team-captain-apply {
+    border-top: 4px solid #36435c;
+    position: relative;
+}
+
+.team-captain-apply > span {
+    display: inline-block;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: italic;
+    color: #323247;
+    background-color: #b6b4e7;
+    padding: 0 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.team-captain-apply > table {
+    margin-top: 80px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.team-captain-apply tr > * {
+    border: 1px solid white;
+    text-align: center;
+}
+
+.team-captain-apply thead tr {
+    height: 40px;
+}
+
+.team-captain-apply tbody tr {
+    height: 56px;
+}
+
+.team-captain-agree, .team-captain-refuse {
+    width: 70px;
+    height: 32px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #ff9c00;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transform: skew(-15deg);
+}
+
+.team-captain-refuse {
+    background-color: white;
+    margin-left: 20px;
+}
+
+.team-captain-warn {
+    color: red;
+}
+
+.team-captain-warn + div {
+    margin-top: 25px;
+}
+
+.team-captain-btn {
+    width: 210px;
+    height: 65px;
+    margin: 130px auto auto;
+    line-height: 65px;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    background-color: #ff9c00;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    border-radius: 8px;
+    transform: skew(-15deg);
+}
+
+.team-captain-sign-up {
+    margin: 50px auto 20px;
+}
+
+.team-captain-team {
+    margin-top: 50px;
+    border-top: 4px solid #36435c;
+    text-align: left;
+    position: relative;
+}
+
+.team-captain-arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid #36435c;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team-captain-team-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: italic;
+    color: #323247;
+    padding-top: 40px;
+}
+
+.team-captain-card {
+    display: inline-block;
+    width: 300px;
+    margin-top: 70px;
+    margin-right: 50px;
+}
+
+.team-captain-card:nth-of-type(3n+1) {
+    margin-right: 0;
+}
+
+.team-captain-duty {
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #8f82bc;
+    font-size: 30px;
+    font-style: italic;
+    color: white;
+}
+
+.team-captain-card:nth-of-type(2) .team-captain-duty {
+    background-color: #52628c;
+}
+
+.team-captain-information {
+    padding: 15px 10px 40px;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 10px 10px 0px #52628c;
+}
+
+.team-captain-information > div {
+    margin-top: 20px;
+    line-height: 34px;
+    background-color: #eeeeee;
+}
+
+.team-captain-information > div > span {
+    padding: 0 15px;
+    font-weight: 700;
+}
+
+.team-captain-information .team-captain-delete {
+    width: 240px;
+    height: 40px;
+    margin: 40px auto auto;
+    font-weight: 500;
+    text-align: center;
+    border: 2px solid #3f4662;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: skew(-15deg);
+}
+
+.team-captain-delete:hover {
+    border: 2px solid #ffd805;
+}
+
+.team-captain-delete-hide {
+    opacity: 0;
+    pointer-events: none
+}
+/*修改报名弹窗样式*/
+.ng-scope .sweet-alert p{
+    color: white;
+}

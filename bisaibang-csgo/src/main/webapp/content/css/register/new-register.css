@@ -1,0 +1,53 @@
+/*new-register.css*/
+/*#ff9b00橙色*/
+
+.sign-in-up {
+    /*margin-left: 10px;*/
+}
+
+.auto-sign {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: initial;
+    top: -2px;
+    position: relative;
+}
+
+.forget-password {
+    float: right;
+    margin-top: 2px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.forget-password a {
+    color: #ffffff;
+}
+
+.forget-password a:hover {
+    color: #fff;
+}
+
+.help-block {
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #c4570c;
+    display: inline-block;
+}
+
+.sign-nav h3 {
+    font-weight: 700;
+    color: #20294e;
+}
+
+.sign-nav h3:hover {
+    color: #fff;
+}
+
+.register-button:hover {
+    /*color: #543102 !important;
+    background-color: #ffe403  !important;*/
+    color: #ffffff;
+    background-color: #3b3b3b;
+}

@@ -1,0 +1,53 @@
+.my-team{
+    min-height: 1288px;
+    background-image: url(/content/images/rule/bj-7.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.organize-team{
+    width:1022px;
+    margin: 0 auto;
+    padding-top: 200px;
+    text-align: center;
+}
+.organize-team-title{
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+}
+.organize-team-explain{
+    font-size: 30px;
+    padding-top: 60px;
+}
+.organize-team-line{
+    width: 350px;
+    height: 2px;
+    background-color: black;
+    float: left;
+    margin-top: 23px;
+}
+.organize-team-line:nth-of-type(2){
+    float: right;
+}
+.organize-team-find{
+    padding-top: 110px;
+}
+.organize-team-btn{
+    width: 260px;
+    height: 64px;
+    line-height: 64px;
+    font-size: 34px;
+    font-weight: 500;
+    color: white;
+    border-radius: 8px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 3px rgb(0,0,0);
+    background-color: #ff9c01;
+    transform: skew(-15deg);
+    cursor: pointer;
+}
+.organize-team-btn a{
+    color: white;
+}

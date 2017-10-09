@@ -1,0 +1,55 @@
+.card-content{
+    min-height: 600px;
+    width: 50%;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.participant-container{
+    width: 100%;
+    background-image: url(/content/images/bj-4.jpg);
+}
+.card.container{
+    width: 100%;
+    background-image: url(/content/images/bj-5.jpg);
+}
+.card-tips{
+    margin-top: 50px;
+    border-left: #ec9f24 solid 3px;
+    font-size: 24px;
+    color: white;
+    padding-left: 15px;
+}
+.card-card{
+    text-align: center;
+    width: 500px;
+    height: 130px;
+    background-image: url("/content/images/card/card.png");
+    margin: 40px auto;
+    position: relative;
+}
+.card-card-time{
+    display: inline-block;
+    margin: 15px auto;
+    color: white;
+    font-size: 18px;
+}
+.card-card-top, .card-card-vs, .card-card-bottom{
+    display: inline-block;
+}
+.card-card-top, .card-card-bottom{
+    color: #dfdfdf;
+    width: 38%;
+    font-size: 18px;
+    text-align: center;
+}
+.card-card-vs{
+    color: #f29c17;
+    font-size: 30px;
+}
+.card-card-score{
+    margin-top: 12px;
+}
+.dashboard-score-input{
+    width: 10%;
+    display: inline-block;
+}

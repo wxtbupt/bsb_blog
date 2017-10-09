@@ -1,0 +1,46 @@
+.my-notice-page {
+    background: url(/content/images/person/my-notice-bg.jpg) #000 no-repeat;
+    background-size: 100% auto;
+}
+
+.my-notice-header {
+    padding-top: 75px;
+    margin-top: 0;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+
+.my-notice-item {
+    border-top: 1px #eee solid;
+    padding: 55px 80px;
+}
+
+.my-notice-item-invite {
+    margin-bottom: 45px;
+}
+
+.my-notice-item-datetime {
+    color: #999;
+    font-style: italic;
+}
+
+.my-notice-agree-btn {
+    font-size: 16px;
+    width: 100px;
+    height:36px;
+    border-radius: 3px;
+    border: none;
+    background-color: #f39700;
+    font-style: italic;
+}
+
+.my-notice-denial-btn {
+    font-size: 16px;
+    width: 100px;
+    height:36px;
+    border-radius: 3px;
+    border: none;
+    background-color: #7d7d7d;
+    margin-left: 10px;
+}

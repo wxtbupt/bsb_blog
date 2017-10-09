@@ -1,0 +1,165 @@
+.team-register-wrap {
+    background-image: url(/content/images/registion/bj.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #000000;
+    padding-top: 130px;
+    margin-top: -130px;
+    padding-bottom: 270px;
+    min-height: 100vh;
+}
+
+.team-register {
+    width: 1220px;
+    margin: 0 auto;
+    color: white;
+}
+
+.team-register-title {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bolder;
+    padding-bottom: 103px;
+    padding-top: 65px;
+}
+
+.team-register-captain {
+    padding: 0 310px;
+    font-size: 20px;
+}
+
+.team-register-captain > .team-register-team-name {
+    padding-bottom: 89px;
+}
+
+.team-register-captain > div {
+    padding-bottom: 40px;
+    line-height: 46px;
+    position: relative;
+}
+
+.team-register-captain-warn {
+    font-size: 16px;
+    color: #cb7e34;
+    position: absolute;
+    top: 40px;
+    left: 170px;
+}
+
+.team-register-input {
+    width: 436px;
+    height: 46px;
+    font-size: 18px;
+    float: right;
+    background-color: transparent;
+    outline: none;
+    padding-left: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.team-register-Info {
+    width: 436px;
+    line-height: 30px;
+    float: right;
+    padding: 8px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.team-register-captain > .team-register-btn {
+    width: 205px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #404040;
+    cursor: pointer;
+}
+
+.team-register-member {
+    padding: 45px 102px 0;
+}
+
+.team-register-member-title {
+    width: 314px;
+    height: 60px;
+    line-height: 54px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto 99px auto;
+}
+
+.team-register-member-info {
+    width: 480px;
+    font-size: 16px;
+    float: left;
+    padding-bottom: 172px;
+}
+
+.team-register-member-info:nth-of-type(2n+1) {
+    margin-left: 55px;
+}
+
+.team-register-member-info > div {
+    height: 38px;
+    line-height: 38px;
+    margin-top: 33px;
+    position: relative;
+}
+
+.member-input {
+    width: 356px;
+    height: 38px;
+    float: right;
+    background-color: transparent;
+    outline: none;
+    padding-left: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.team-register-member-warn {
+    font-size: 14px;
+    color: #cb7e34;
+    position: absolute;
+    top: 35px;
+    left: 126px;
+}
+
+.team-register-member-info > .team-register-member-title {
+    width: 199px;
+    height: 54px;
+    line-height: 50px;
+    font-size: 33px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.team-register-btn {
+    width: 364px;
+    height: 82px;
+    display: block;
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    outline: none;
+    background-color: #404040;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.team-register-warn {
+    text-align: center;
+    font-size: 20px;
+    color: #cb7e34;
+    margin-top: 14px;
+}

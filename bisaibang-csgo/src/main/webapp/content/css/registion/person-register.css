@@ -1,0 +1,158 @@
+ul, li {
+    list-style: none;
+}
+
+.clearfloat::after {
+    display: block;
+    height: 0;
+    content: "";
+    clear: both;
+}
+
+.person-register-wrap {
+    background-image: url(/content/images/registion/bj.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: black;
+    padding-top: 130px;
+    margin-top: -130px;
+    min-height: 100vh;
+}
+
+.person-register {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 65px 310px 233px 310px;
+    color: white;
+}
+
+.person-register-title {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+.person-register-warn {
+    text-align: center;
+    font-size: 18px;
+    color: #cb7e34;
+}
+
+.person-register-form {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.person-register-form > div {
+    padding-bottom: 38px;
+    line-height: 46px;
+}
+
+.person-register-form .person-register-city {
+    padding-bottom: 25px;
+}
+
+.person-register-form .person-register-adress {
+    padding-bottom: 25px;
+}
+
+.input-wrap {
+    width: 436px;
+    float: right;
+    position: relative;
+}
+
+.person-register-input-warn {
+    font-size: 16px;
+    color: #cb7e34;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+
+.input {
+    width: 436px;
+    height: 44px;
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    padding-left: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);;
+    color: white;
+}
+
+.person-register-select {
+    width: 436px;
+    height: 46px;
+    float: right;
+    position: relative;
+}
+
+.select-btn {
+    width: 60px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.person-register-select > ul {
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+    float: right;
+    background-color: black;
+    position: relative;
+    z-index: 999;
+}
+
+.person-register-select > ul > li {
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.person-register-select > ul > li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.person-register-Info {
+    width: 436px;
+    line-height: 30px;
+    float: right;
+    padding: 8px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.person-register-form > .person-register-btn {
+    width: 205px;
+    height: 45px;
+    display: block;
+    line-height: 45px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #404040;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

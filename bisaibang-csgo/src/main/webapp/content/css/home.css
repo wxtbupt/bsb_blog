@@ -1,0 +1,363 @@
+/*旧样式home.css内容*/
+
+/*home.css*/
+.register-box {
+    width: 298px;
+}
+
+.register-dialog.small-dialog {
+    width: 298px;
+    margin: 0 auto;
+}
+
+.register-img {
+    position: fixed;
+    /*top: -70px;
+    left: -35px;
+    width: 525px;*/
+}
+
+.register-img-2 {
+    position: relative;
+    top: 43px;
+    left: -161px;
+}
+
+.nav-item {
+    /*background: linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);*/
+    /*background-size: 8px 8px;*/
+    /*background-image: url("/content/images/home/navbar-bg.jpg");*/
+}
+
+.nav-item.home {
+    width: 141px;
+    height: 46px;
+}
+
+.navbar-collapse span {
+    color: #fff;
+}
+
+/*home-menu*/
+.home-menu-wrap {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.home-menu {
+    width: 1220px;
+    height: 130px;
+    margin: 0 auto;
+    color: #ffffff;
+    position: relative;
+}
+
+.home-menu > img {
+    width: 200px;
+    height: 100px;
+    padding-top: 15px;
+}
+
+.home-menu-nav, .home-menu-register {
+    display: inline-block;
+}
+
+.home-top-nav {
+    position: absolute;
+    bottom: 34px;
+    right: 0;
+}
+
+.home-top-nav > li {
+    display: inline-block;
+}
+
+.home-top-nav > li > a {
+    padding: 0 15px 0 0;
+    color: white;
+}
+
+.home-menu-nav {
+    width: 600px;
+    height: 40px;
+    line-height: 20px;
+    margin-left: 50px;
+    font-size: 18px;
+    position: relative;
+    top: 40px;
+}
+
+.home-menu-nav {
+    transform: skew(-10deg);
+}
+
+.home-menu-nav > a {
+    color: white;
+    display: inline-block;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.home-menu-nav-active {
+    border-bottom: 4px solid white;
+}
+
+.home-menu-nav > a > span {
+    font-size: 14px;
+}
+
+.home-menu-nav > .home-menu-line {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    transform: skew(-15deg);
+    padding: 0 7px;
+    vertical-align: top;
+}
+
+.home-menu-register {
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 36px;
+    right: -278px;
+}
+
+.home-menu-register span {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    transform: skew(-15deg);
+    padding-left: 10px;
+    padding-right: 8px;
+}
+
+.register, .sign-in {
+    width: 25px;
+    height: 16px;
+    text-align: left;
+    line-height: normal;
+    position: absolute;
+    cursor: pointer;
+}
+
+.register {
+    top: 0;
+    left: 0;
+}
+
+.sign-in {
+    bottom: 0;
+    right: 0;
+}
+
+/*footer*/
+.footer {
+    background-color: #171717;
+}
+
+.footer .container {
+    width: 1220px;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 200px;
+}
+
+.footer-company-logo {
+    height: 60px;
+}
+
+.footer-game-logo {
+    margin-left: 60px;
+    height: 62px;
+}
+
+.footer-info {
+    display: inline-block;
+    margin-left: 160px;
+    line-height: 25px;
+    position: relative;
+    top: 15px;
+}
+
+.footer-info p, .footer-info a {
+    font-size: 25px;
+    color: #fff;
+}
+
+.footer-info span {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+/*新版csgo的首页*/
+.text-linear {
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 255, 255, 1)), to(rgba(163, 168, 185, 1)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-wrap {
+    margin-top: -130px;
+    background-color: #091016;
+}
+
+.csgo-home {
+    background-image: url(/content/images/home/home-csgo/guanjun.png);
+    background-position-x: center;
+    background-position-y: -305px;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+
+.home-banner {
+    height: 487px;
+    padding-bottom: 18px;
+    background-image: url(/content/images/home/home-csgo/csgo-banner.jpg);
+    background-position: top center;
+}
+
+.csgo-home {
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-register {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.home-person-register {
+    cursor: pointer;
+    outline: none;
+}
+
+.home-team-register {
+    margin-left: 73px;
+    cursor: pointer;
+    outline: none;
+}
+
+.home-bullet {
+    height: 75px;
+    background-image: url(/content/images/home/home-csgo/bullet.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 158px;
+}
+
+.home-introduce {
+    height: 2100px;
+    padding: 0 80px;
+}
+
+/*-------*/
+.home-card {
+    position: relative;
+}
+
+@media (max-width: 767px)
+{
+    .home-card li {
+        float: left;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+}
+@media (min-width: 768px)
+{
+    .home-card li {
+        float: left;
+        width: 33.33333%;
+        text-align: center;
+        color: white;
+    }
+}
+.home-card li .item {
+    position: relative;
+    top:0;
+    display: block;
+    margin: 0 20px 40px;
+    padding: 20px;
+    box-shadow: 0 2px 5px 0 #cccbcb;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+.home-card li .item:hover{
+    transform: translate(0,-5px);
+
+}
+.home-card li .item-pic {
+    margin-bottom: 24px;
+    height: 160px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+.home-card li .item-pic img {
+    width: 100%;
+    height: auto;
+
+}
+.home-card li .item-pic  :hover{
+    transform: scale(1.05);
+}
+.home-card li .item .item-content {
+    height: 40px;
+    line-height: 20px;
+    color: #6E6E6E;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: center;
+}
+.home-card li .item-footer {
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+.home-card li .entry-category{
+    color: #c4570c;
+
+}
+.home-card li .entry-meta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #c4570c;
+}
+.home-card li .entry-meta .entry-date {
+    font-size: 14px;
+    color: #A6A6A6;
+    line-height: 20px;
+}
+/*.home-introduce > img {
+    padding-bottom: 14px;
+}
+
+.home-introduce > img:nth-of-type(2n) {
+    margin-left: 120px;
+}*/
+
+.home-world {
+    text-align: center;
+}
+
+.home-text {
+    height: 500px;
+    background-image: url(/content/images/home/home-csgo/home-text.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+}

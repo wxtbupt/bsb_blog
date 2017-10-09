@@ -1,0 +1,187 @@
+/*.video-title{
+    height:140px;
+    color:#f8ffff;
+    font-style:italic;
+    text-align: center;
+}
+.video-title h2{
+    line-height:140px;
+    margin: 0;
+}*/
+
+.video-content{
+    background-image: url("/content/images/video/bg.jpg");
+    background-repeat: no-repeat;
+    min-height: 768px;
+}
+
+.video-tabs{
+    width: 1200px;
+    height: 290px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.xietixing{
+    margin: 175px auto 0 37px;
+    width: 30px;
+    height: 0;
+    border-bottom: 60px solid black;
+    float: left;
+    border-left: 20px solid transparent;
+
+}
+
+.tabs-search-container{
+    width: 1096px;
+    height: 60px;
+    margin: 10px auto;
+    background:center #0b0a10 url("/content/images/video/logo.png");
+    background-repeat: no-repeat;
+    background-size: auto 60px;
+    float: left;
+}
+
+.video-title{
+    position: relative;
+    float: left;
+    top: 61.5px;
+    left: 450px;
+    font-size: 30px;
+    color: #fff;
+    font-style: italic;
+}
+
+.video-tabs .tabs-group{
+    margin: 10px 0 0 -7px;
+    font-size: 0;
+    height: 41px;
+    overflow: hidden;
+}
+
+.video-tabs a{
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    margin-left: 7px;
+    margin-right: 9px;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #EC9F24;
+    font-size: 14px;
+    color: #EC9F24;
+    transform: skew(-20deg);
+    background-size: 120px 40px;
+    border-radius: 3px;
+}
+
+.tabs-group-item{
+    transform: skew(20deg);
+}
+
+a.selected{
+    background-color: #EC9F24;
+    border: 0px;
+    color: white;
+}
+
+.video-tabs a:last-child{
+    margin-right: 0;
+}
+
+.video-search{
+    width: 325px;
+    height: 40px;
+    line-height: 40px;
+    margin: 125px 37px auto;
+    display: flex;
+    float: right;
+
+
+   /* width: 325px;
+    line-height: 130px;
+    display: flex;
+    position: relative;
+    padding-right: 45px;*/
+}
+
+.video-search input{
+    background-color: #eee;
+    border: none;
+    border-radius: 3px;
+    color: #000;
+    font-size: 18px;
+    width: 280px;
+    height: 40px;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.video-search glyphicon-search-btn{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(/content/images/forums/sousuo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: contain;
+}
+
+
+.video-group{
+    width: 1127px;
+    margin: -18px auto;
+    font-size: 0;
+}
+
+.video-group .video-item{
+    display: inline-block;
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-right: 38px;
+    margin-bottom: 40px;
+    background-image: url(/content/images/video/video-bg.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.video-item img{
+    float: left;
+    position: relative;
+    left: 145px;
+    top: -130px;
+    display: none;
+}
+
+.video-group .video-item:hover img{
+    display: block;
+}
+
+.video-group .video-item:hover div{
+    width: 348px;
+    height: 198px;
+    position: relative;
+    border-radius:5px;
+    background-color: rgba(20,20,20,0.8);
+}
+
+.video-group .video-item:nth-child(3n){
+     margin-right: 0;
+ }
+
+.video-item .sub-des{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+}

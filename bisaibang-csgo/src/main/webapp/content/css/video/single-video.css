@@ -1,0 +1,151 @@
+.single-video {
+    width: 100%;
+    color: #fff;
+    background: url("/content/images/video/video-bg2.jpg") no-repeat center top;
+}
+
+.sv-subnav {
+    color: #c77d1a;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 50px;
+}
+
+.sv-subnav > a {
+    color: #777;
+    cursor: pointer;
+}
+
+.sv-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.sv-video-area {
+    padding: 0 99px;
+}
+
+.sv-video-title {
+    height: 140px;
+    line-height: 200px;
+    font-size: 30px;
+    color: #aaa;
+}
+
+.sv-video {
+    height: 563px;
+    width: 1000px;
+    background-color: #333;
+    border: 1px solid #aaa;
+    box-sizing: content-box;
+}
+
+.sv-video-description {
+    font-size: 18px;
+    height: 120px;
+    line-height: 35px;
+    margin-top: 20px;
+}
+
+.sv-comment-area {
+
+}
+
+.sv-comment-send {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.sv-comment-list {
+
+}
+
+.sv-cmt {
+
+}
+
+.sv-cmt-author-info {
+    width: 240px;
+    padding: 0 20px;
+    float: left;
+}
+
+.sv-cmt-author-profile {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #666;
+    float: left;
+}
+
+.sv-cmt-author-name {
+    width: 130px;
+    float: left;
+    padding-left: 18px;
+}
+
+.sv-cmt-main {
+    width: 800px;
+    float: left;
+    margin: 0 20px;
+
+}
+
+.sv-cmt-author-cmt {
+    width: 800px;
+}
+
+.sv-cmt-other-cmt-list {
+    background-color: #151515;
+    width: 765px;
+}
+
+.sv-cmt-other-cmt {
+    padding: 15px 15px 15px 0;
+
+}
+
+.sv-cmt-other-author-profile {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #666;
+    float: left;
+    margin: 0 15px;
+}
+
+.sv-cmt-other-author-name {
+    width: 130px;
+    float: left;
+}
+
+.sv-cmt-other-cmt-main {
+    width: 520px;
+    float: left;
+}
+
+.sv-cmt-reply {
+    width: 106px;
+    float: left;
+    text-align: center;
+}
+
+.sv-cmt-reply-btn {
+    width: 60px;
+    height: 30px;
+    background-color: #312f30;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+}
+
+.post-reply-item .reply-text-box-input {
+    max-width: none;
+}
+
+.video-reply-author .post-reply-item {
+    padding: 0 10px;
+}

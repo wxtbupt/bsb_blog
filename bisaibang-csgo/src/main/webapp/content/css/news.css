@@ -1,0 +1,323 @@
+/*news.css*/
+body{
+    /*background: #000;*/
+
+}
+/*.news-color{*/
+    /*backround-color: #000;*/
+/*}*/
+.news{
+    background-image: url("../bj.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.real-news {
+    /*background-image: url(/content/images/news/news-bg-body.jpg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 100%;*/
+    margin: 20px 0;
+}
+
+.real-news-content {
+    /*background-color: #6fab12;*/
+    min-height: 1000px;
+}
+
+.real-news-top3pic {
+    height: 300px;
+    /*background-color: black;*/
+    display: flex;
+    background-image: url(/content/images/news/logo－.png);
+    background-repeat:no-repeat;
+    background-position: 168px 225px;
+}
+
+.real-news-top3pic-pic.middle-pic {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.real-news-top3pic-pic {
+    margin-top: 50px;
+    height: 200px;
+    width: 360px;
+    /*background-color: #00aaff;*/
+    border: 2px solid gray;
+    border-radius:5px;
+}
+
+.real-news-bar {
+    height: 60px;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+.real-news-bar-text {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+
+/*news-page.css*/
+.news-page {
+    width: 1220px;
+    margin: 0 auto;
+    padding-top: 116px;
+    color: #ffffff;
+}
+.news-page-content{
+    border: 1px solid #2d3b39;
+    padding-top: 72px;
+    padding-left: 72px;
+    padding-right: 82px;
+    color: white;
+}
+
+.news-page > .line-part1.line-part{
+    margin-top: 76px;
+}
+.news .extra-news-content > .nav > li {
+     float: none;
+     height: auto;
+     line-height: normal;
+     margin-top: auto;
+}
+.line-part1 hr{
+    border:none;
+    border-top:2px solid #c87e1b;
+}
+.line-part2 hr{
+    border:none;
+    border-top:1px solid #aaa;
+}
+.line-part1 .common1{
+    font-size:22px;
+    line-height: 22px;
+    color: #d9d7cc;
+    float: left;
+}
+.line-part1 .common2{
+    font-size: 17px;
+    color: #d9d7cc;
+    float: right;
+}
+.line-part1 .common2 > a{
+    color: #9a754a;
+}
+.news-page  .line-part2{
+    padding-bottom: 12px;
+}
+.news-page  .line-part2 > span{
+    font-size: 23px;
+    color: #d9d7cc;
+}
+
+.np-title {
+    font-size: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+.np-create-date {
+    font-size: 14px;
+    text-align: right;
+    margin-top: -15px;
+}
+
+.np-article {
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+.np-article * {
+    word-wrap: break-word;
+}
+
+.np-article img {
+    display: block;
+    margin: 0 auto;
+}
+
+.np-banner {
+    margin: 0 auto;
+    display: block;
+}
+
+.news-face-pic .img-left {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 200px;
+    height: 145px;
+    overflow-x: hidden;
+    /*border: 2px #aaa solid;*/
+    /*border-radius: 4px;*/
+    z-index: 1;
+}
+
+.news-face-pic .img-right {
+    position: absolute;
+    left: 180px;
+    display: inline-block;
+    width: 58px;
+    height: 145px;
+    overflow-x: hidden;
+    /*transform: skew(-9deg,0deg);*/
+    /*-moz-transform: skew(-9deg,0deg);*/
+    border: 2px #aaa solid;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.news-face-pic .img-right .image-transform-fix {
+    position: absolute;
+    left: 13px;
+    width: 100%;
+    height: 100%;
+    /*transform: skew(9deg,0deg);*/
+    /*-moz-transform: skew(9deg,0deg);*/
+    border-radius: 4px;
+    /* overflow: hidden; */
+}
+
+.news-face-pic .news-image-piece {
+    width: 100%;
+    height: 100%;
+    /*background-repeat: no-repeat;*/
+}
+
+.news-face-pic .img-left .news-image-piece {
+    background-position: 0 0;
+    border: 2px #aaa solid;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.extra-news-content li a:hover .news-image-piece,
+.extra-news-content li a:hover .img-right {
+    border-color: #EFA023;;
+}
+
+.news-face-pic .img-right .news-image-piece {
+    background-position: 67px 0;
+}
+.line-part1.line-part{
+    margin-top: 121px;
+}
+
+.news .news-page-num-wrap{
+    padding-top: 30px;
+}
+.news .news-page-num-box{
+    width: 50px;
+    height: 30px;
+    transform: skew(-15deg);
+}
+.news .news-page-num-box:hover{
+    background-color:#ff9c01;
+}
+.news .news-page-num-btn-active{
+    background-color:#ff9c01;
+}
+
+/*csgo的新闻样式*/
+.csgo-news-wrap {
+    background-image: url(/content/images/registion/bj.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    padding-top: 130px;
+    margin-top: -130px;
+    padding-bottom: 30px;
+}
+
+.csgo-news {
+    width: 1220px;
+    min-height: 1000px;
+    margin: 0 auto;
+    padding: 68px 100px 0;
+}
+
+.news-title > span {
+    display: inline-block;
+}
+
+.news-title > span:nth-of-type(1) {
+    font-size: 56px;
+    line-height: 56px;
+    color: #e7e7e7;
+}
+
+.news-title > span:nth-of-type(2) {
+    font-size: 30px;
+    color: #d9d7cd;
+}
+
+.csgo-news > ul {
+    padding-top: 50px;
+}
+
+.csgo-news > ul > li {
+    height: 178px;
+    padding: 25px 50px 25px 246px ;
+    color: white;
+    border-bottom: 1px solid #6e737b;
+    cursor: pointer;
+    position: relative;
+}
+.csgo-news > ul > li > img{
+    float: left;
+    width: 224px;
+    height: 128px;
+    position: absolute;
+    left: 0;
+    top: 25px;
+}
+.news-list-text{
+    width: 100%;
+    height: 128px;
+}
+.news-list-text-title{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.news-list-text-date{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.news-list-text-introduce{
+    height: 52px;
+    font-size: 16px;
+    line-height: 26px;
+    word-wrap: break-word;
+    overflow:hidden;
+}
+.news-list-scroll{
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    color: #d9d7cd;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+.news-list-arrow{
+    text-align: center;
+    line-height: 14px;
+}
+.news-list-arrow span{
+    width: 0;
+    height: 0;
+    border-top: 12px solid white;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 0 solid transparent;
+    font-size: 0;
+}
