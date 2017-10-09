@@ -1,0 +1,18 @@
+<div class="post-reply-item">
+    <div class="reply-text-box-avatar">
+        <div class="theme-reply-item-author clearfix">
+            <div class="author-avatar pull-left">
+                <img xmlns="http://www.w3.org/1999/xhtml" ng-src="{{vm.avatar}}" width="80" height="80" />
+            </div>
+        </div>
+    </div>
+    <div class="reply-text-box-input">
+        <span class="author-name">{{vm.personName}}</span>
+        <form name="form">
+            <textarea class="form-control" ng-model="vm.reply.content" required="required"></textarea>
+            <div class="content-editor-btn clearfix text-right">
+                <button type="button" class="forums-theme-reply-btn pull-right" ng-click="vm.submit()" ng-disabled="form.$invalid">发表</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="bsbmsoneApp.chatLog.detail.title">Chat Log</span> {{vm.chatLog.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="bsbmsoneApp.chatLog.message">Message</span></dt>
+        <dd>
+            <span>{{vm.chatLog.message}}</span>
+        </dd>
+        <dt><span data-translate="bsbmsoneApp.chatLog.toWhom">To Whom</span></dt>
+        <dd>
+            {{vm.chatLog.toWhom.login}}
+        </dd>
+        <dt><span data-translate="bsbmsoneApp.chatLog.fromWhom">From Whom</span></dt>
+        <dd>
+            {{vm.chatLog.fromWhom.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="chat-log-detail.edit({id:vm.chatLog.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

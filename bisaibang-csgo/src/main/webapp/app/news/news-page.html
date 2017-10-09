@@ -1,0 +1,25 @@
+<div class="csgo-news-wrap" ng-cloak="">
+    <div ng-cloak="" class="news-page">
+        <div class="news-page-content">
+            <div class="np-title">{{vm.title}}</div>
+            <div class="np-create-date">{{vm.createDate | date:'yyyy/MM/dd'}}</div>
+            <div class="np-article" ng-bind-html="vm.content"></div>
+        </div>
+        <div class="line-part1 line-part clearfloat">
+            <div class="common1">你的评论</div>
+            <div ng-hide="vm.isLogIn" class="common2">游客请 <a ng-click="vm.login()">登录</a></div>
+        </div>
+        <reply-text-box-for-news ng-if="vm.article" level="1" article-id="vm.article.id"></reply-text-box-for-news>
+        <div>
+            <div class="line-part2 line-part">
+                <span>相关评论：</span>
+            </div>
+            <news-reply-item ng-if="vm.article" article-id="vm.article.id" ng-repeat="comment in vm.commentAll"
+                             comment="comment"></news-reply-item>
+        </div>
+    </div>
+    <div class="forums-page-selection">
+        <news-page-num ng-show="vm.totalPages>1" total-pages="vm.totalPages" to-page="vm.toPage(page)"></news-page-num>
+    </div>
+</div>
+<home-footer></home-footer>

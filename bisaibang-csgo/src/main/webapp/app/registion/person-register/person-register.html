@@ -1,0 +1,82 @@
+<div class="person-register-wrap">
+    <div class="person-register" ng-if=" vm.isLogIn">
+        <div class="person-register-title">
+            个人赛报名
+        </div>
+        <div class="person-register-warn">
+            注： 个人赛将全程采用线下对战
+        </div>
+        <form class="person-register-form" role="form" ng-submit="vm.login($event)">
+            <div class="person-register-city">
+                *参赛城市
+                <div class="person-register-select clearfloat" ng-init="vm.citiesShow = false">
+                    <input disabled class="input" type="text" placeholder="请选择参赛城市" ng-model="vm.cityName">
+                    <div class="select-btn" ng-click="vm.citiesShow=!vm.citiesShow">
+                        <span class="arrow"></span>
+                    </div>
+                    <ul class="clearfloat" ng-show="vm.citiesShow">
+                        <li ng-repeat="city in vm.cities" ng-click="vm.chooseCity(city);vm.citiesShow = false">
+                            {{city.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="person-register-adress clearfloat">
+                *比赛地点
+                <div class="person-register-Info">北京市富海大厦</div>
+            </div>
+            <div class="person-register-name clearfloat">
+                *姓名
+                <div class="input-wrap" ng-init="vm.nameIsEmpty = true">
+                    <input ng-blur="vm.testName();vm.nameIsEmpty = vm.name" ng-model="vm.name" class="input" type="text"
+                           placeholder="请输入姓名">
+                    <div class="person-register-input-warn">
+                        <span ng-hide="vm.nameIsEmpty">*不能为空</span>
+                    </div>
+                </div>
+            </div>
+            <div class="person-register-phone clearfloat">
+                *手机号
+                <div class="person-register-Info">{{vm.personPhone}}（已绑定）</div>
+            </div>
+            <div class="person-register-ID clearfloat">
+                *身份证
+                <div class="input-wrap" ng-init="vm.IDIsEmpty = true">
+                    <input ng-blur="vm.testID();vm.IDIsEmpty = vm.ID" ng-model="vm.ID" class="input" type="text"
+                           placeholder="请输入身份证号码">
+                    <div class="person-register-input-warn">
+                        <span ng-hide="vm.IDIsEmpty">*不能为空</span>
+                        <span ng-show="vm.personInfoWarn.ID">*请输入正确格式</span>
+                    </div>
+                </div>
+            </div>
+            <div class="person-register-email clearfloat">
+                *邮箱
+                <div class="input-wrap" ng-init="vm.emailIsEmpty = true">
+                    <input ng-blur="vm.testEmail();vm.emailIsEmpty = vm.email" ng-model="vm.email" class="input"
+                           type="text" placeholder="请输入邮箱">
+                    <div class="person-register-input-warn">
+                        <span ng-hide="vm.emailIsEmpty">*不能为空</span>
+                        <span ng-show="vm.personInfoWarn.email">*请输入正确格式</span>
+                    </div>
+                </div>
+            </div>
+            <div class="person-register-account clearfloat">
+                *国服账号
+                <div class="input-wrap" ng-init="vm.accountIsEmpty = true">
+                    <input ng-blur="vm.testAccount();vm.accountIsEmpty = vm.account" ng-model="vm.account" class="input"
+                           type="text" placeholder="请输入国服CS:GO账号">
+                    <div class="person-register-input-warn">
+                        <span ng-hide="vm.accountIsEmpty">*不能为空</span>
+                        <span ng-show="vm.personInfoWarn.account">*请输入正确格式</span>
+                    </div>
+                </div>
+            </div>
+            <button class="person-register-btn" ng-click="vm.submit()">确认报名</button>
+            <div class="person-register-warn" ng-show="vm.warn">
+                *请填写正确个人信息
+            </div>
+        </form>
+    </div>
+</div>
+<home-footer></home-footer>

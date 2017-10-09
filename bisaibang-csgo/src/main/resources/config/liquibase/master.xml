@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_Article.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_Comment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_Forum.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_Post.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_Thread.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170805204301_added_entity_Team.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_Registration.xml" relativeToChangelogFile="false"/>
+
+    <include file="classpath:config/liquibase/changelog/20170810072140_added_entity_ChatLog.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_constraints_Article.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_constraints_Comment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_constraints_Post.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_constraints_Registration.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170206063318_added_entity_constraints_Thread.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170810072140_added_entity_constraints_ChatLog.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20170206165301_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170303154502_added_fix_Level2_Post_Comment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170308123401_added_avatar_User.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170323111101_added_Column.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170330131301_added_column_captain.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170608011901_added_User.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170630151901_added_entity_Card.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170805220302_added_entity_TeamPlayer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170807115301_added_entity_Video.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170810235201_added_entity_HomeConfig.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170814133601_added_index.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170815172301_added_Comment_video.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170817145801_added_column_video.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170905161001_added_entity_City.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170905161402_added_entity_CityMember.xml" relativeToChangelogFile="false"/>
+    <!--    <include file="classpath:config/liquibase/changelog/.xml" relativeToChangelogFile="false"/>-->
+</databaseChangeLog>

@@ -1,0 +1,67 @@
+<div class="team-member">
+    <div class="team-member-header">
+        <home-menu></home-menu>
+        <div class="team-member-header-content">
+            <div class="team-member-title">
+                {{vm.team.captain.team.name}}
+            </div>
+            <div class="team-member-share" ng-if="vm.teamMemberState.cancelApply && vm.teamMemberState.isMember">
+                分享到：
+                <baidu-share team-member-state="vm.teamMemberState"></baidu-share>
+                <copy-url></copy-url>
+            </div>
+            <input class="team-member-share-address"
+                   ng-model="vm.shareLink" ng-if="vm.teamMemberState.cancelApply && vm.teamMemberState.isMember">
+            <div class="team-member-explain" ng-if="vm.teamMemberState.isApply">
+                点击申请加入按钮，并等待队长审批
+            </div>
+        </div>
+    </div>
+    <div class="team-member-content">
+        <div class="team-member-content-content">
+            <button class="team-member-btn" ng-click="vm.leaveTeam()"
+                    ng-if="vm.teamMemberState.isMember && vm.isRegistrations">退出队伍
+            </button>
+            <button class="team-member-btn" ng-click="vm.teamApply()" ng-if="vm.teamMemberState.isApply">申请加入</button>
+            <button class="team-member-btn" ng-click="vm.teamCancelApply()" ng-if="vm.teamMemberState.cancelApply">
+                取消申请
+            </button>
+            <div class="team-member-team">
+                <span class="team-member-arrow"></span>
+                <div class="team-member-team-title">
+                    队伍成员
+                </div>
+                <div class="team-member-card">
+                    <div class="team-member-duty">
+                        队长
+                    </div>
+                    <div class="team-member-information">
+                        <div class="team-member-name"><span>姓名</span>{{vm.team.captain.name}}</div>
+                        <div class="team-member-id"><span>战网ID</span>{{vm.team.captain.nickName}}</div>
+                        <div class="team-member-score"><span>第五赛季最高分</span>待审核</div>
+                        <div class="team-member-id-card"><span>身份证号</span>{{vm.team.captain.user.personalID?vm.team.captain.user.personalID.substring(0,10)+"****"+vm.team.captain.user.personalID.substring(14,18):""}}
+                        </div>
+                        <div class="team-member-phone"><span>手机号</span>{{vm.team.captain.user.phone?vm.team.captain.user.fullPhone.substring(0,3)+"****"+vm.team.captain.user.fullPhone.substring(7,11):""}}
+                        </div>
+                        <div class="team-member-email"><span>邮箱</span>{{vm.team.captain.user.personalEmail}}</div>
+                    </div>
+                </div>
+                <div class="team-member-card" ng-repeat="member in vm.team.member">
+                    <div class="team-member-duty">
+                        队员
+                    </div>
+                    <div class="team-member-information">
+                        <div class="team-member-name"><span>姓名</span>{{member.name}}</div>
+                        <div class="team-member-id"><span>战网ID</span>{{member.nickName}}</div>
+                        <div class="team-member-score"><span>第五赛季最高分</span>待审核</div>
+                        <div class="team-member-id-card"><span>身份证号</span>{{member.user.personalID?member.user.personalID.substring(0,10)+"****"+member.user.personalID.substring(14,18):""}}
+                        </div>
+                        <div class="team-member-phone"><span>手机号</span>{{member.user.phone?member.user.fullPhone.substring(0,3)+"****"+member.user.fullPhone.substring(7,11):""}}
+                        </div>
+                        <div class="team-member-email"><span>邮箱</span>{{member.user.personalEmail}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

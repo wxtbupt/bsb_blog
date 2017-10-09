@@ -1,0 +1,122 @@
+<!-- https://www.battlenet.com.cn/forums/zh/bnet/9318529/ -->
+<div class="forums-nav">
+    <div class="container">
+        <span><a ui-sref="forums">论坛</a>&nbsp;>&nbsp;</span>
+        <span>交流互动专区</span>
+    </div>
+</div>
+
+<div class="forums">
+    <div class="forums-general-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="forums-general-title">交流互动专区-管理者</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="search-theme">
+                        <!--<i class="glyphicon glyphicon-search" ng-click="vm.search(vm.searchContent)"></i>-->
+                        <!--<input type="text" class="" placeholder="搜索" ng-model="vm.searchContent">-->
+                        <button type="button" ng-click="vm.createNewTheme()"><i class="glyphicon glyphicon-plus"></i>&nbsp;新主题</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <new-theme is-show="vm.isShowNew"></new-theme>
+    <div class="forums-content">
+        <div class="container">
+            <div class="form-general-content">
+                <!-- 置顶区 -->
+                <div class="stick-area">
+                    <!--<a ui-sref="forums-theme" class="article-item">-->
+                        <div class="row article-item">
+                            <div class="col-md-6 col-xs-7">
+                                <a ui-sref="forums-theme" class="">
+                                    <div class="article-title"><i class="glyphicon glyphicon-file"></i>&nbsp;&nbsp;【公告】长名字很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长</div>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-xs-5 visible-xs visible-sm hidden-md hidden-lg">
+                                <div class="article-publish-date">2015年11月25日</div>
+                            </div>
+                            <div class="col-xs-3 col-sm-4 col-md-2">
+                                <div class="article-publisher">绯夏之霜</div>
+                            </div>
+                            <div class="col-xs-2 col-sm-1">
+                                <div class="article-reply"><i class="glyphicon glyphicon-comment"></i>&nbsp;&nbsp;0</div>
+                            </div>
+                            <div class="col-md-2 col-xs-4 hidden-xs visible-md visible-lg">
+                                <div class="article-publish-date">2015年11月25日</div>
+                            </div>
+                            <div class="col-md-1 col-xs-2 col-sm-1 ">
+                                <div class="delete-button pull-right" ng-click="vm.deleteForumPost()">&nbsp;&nbsp;刪帖</div>
+                            </div>
+                        </div>
+                    <!--</a>-->
+
+                        <div class="row article-item">
+                            <div class="col-md-6 col-xs-7">
+                                <a ui-sref="news-article" class="">
+                                    <div class="article-title"><i class="glyphicon glyphicon-file"></i>&nbsp;&nbsp;【公告】长名字很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长</div>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-xs-5 visible-xs visible-sm hidden-md hidden-lg">
+                                <div class="article-publish-date">2015年11月25日</div>
+                            </div>
+                            <div class="col-xs-3 col-sm-4 col-md-2">
+                                <div class="article-publisher">绯夏之霜</div>
+                            </div>
+                            <div class="col-xs-2 col-sm-1">
+                                <div class="article-reply"><i class="glyphicon glyphicon-comment"></i>&nbsp;&nbsp;0</div>
+                            </div>
+                            <div class="col-md-2 col-xs-4 hidden-xs visible-md visible-lg">
+                                <div class="article-publish-date">2015年11月25日</div>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- 最新帖子 -->
+                <div class="latest-area">
+                    <!--<a ui-sref="news-article" class="article-item" ng-repeat="thread in vm.threadList | orderBy:thread.createDate:'desc'">-->
+                    <div class="row article-item" ng-repeat="thread in vm.threadList" ng-show="thread.isAbandon == false">
+                        <div>
+                            <div class="col-md-6 col-xs-7">
+                                <a ui-sref="news-article" class="">
+                                    <div class="article-title"><i class="glyphicon glyphicon-file"></i>&nbsp;&nbsp;{{thread.title}}</div>
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-xs-5 visible-xs visible-sm hidden-md hidden-lg">
+                                <div class="article-publish-date">{{thread.createDate | date:'yyyy/MM/dd'}}</div>
+                            </div>
+                            <div class="col-xs-3 col-sm-4 col-md-2">
+                                <div class="article-publisher">{{thread.creator.nickName}}</div>
+                            </div>
+                            <div class="col-xs-2 col-sm-1">
+                                <div class="article-reply"><i class="glyphicon glyphicon-comment"></i>&nbsp;&nbsp;{{thread.postNum}}</div>
+                            </div>
+                            <div class="col-md-2 col-xs-4 hidden-xs visible-md visible-lg">
+                                <div class="article-publish-date">{{thread.createDate | date:'yyyy/MM/dd HH:mm'}}</div>
+                            </div>
+                            <div class="col-md-1 col-xs-2 col-sm-1 ">
+                                <div class="delete-button pull-right" ng-click="vm.deleteForumThread(thread.id)">&nbsp;&nbsp;刪帖</div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div  class="text-center">
+                    <!--<jhi-item-count class="pagination-text" page="vm.page" total="vm.queryCount"-->
+                    <!--items-per-page="vm.itemsPerPage"></jhi-item-count>-->
+                    <!--<uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page"-->
+                                    <!--ng-change="vm.transition()"></uib-pagination>-->
+                </div>
+                <div class="forums-page-selection">
+                    <button class="forums-next-page-btn" type="button" ng-click="vm.transition(-1)" ng-disabled="vm.isFirst">&lt;上一页</button>&nbsp;&nbsp;
+                    <span>{{vm.page}}</span>&nbsp;&nbsp;
+                    <button class="forums-next-page-btn" type="button" ng-click="vm.transition(1)" ng-disabled="vm.isLast">下一页&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

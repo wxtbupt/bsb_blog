@@ -1,0 +1,116 @@
+<div class="bsb-station">
+<div class="container">
+<div class="bsb-station-forum-thread">
+    <div class="forums-nav">
+        <a ui-sref="new-forum({id:vm.forumId})">讨论区首页&nbsp;>&nbsp;</a>
+        <span>帖子详情页</span>
+    </div>
+    <div class="theme-content-container">
+        <h2 class="theme-title">{{vm.thread.title}}</h2>
+        <div class="theme-head">
+            <img class="theme-head-avatar"
+                 ng-src="{{vm.thread.creator.avatarUrl || 'https://www.battlenet.com.cn/forums/static/images/avatars/avatar-default.png'}}"
+                 width="50" height="50"/>
+            <div class="theme-head-content" style="display: inline-block">
+                <span class="theme-from">来自：</span><span class="theme-author">{{vm.thread.creator.nickName || vm.thread.creator.phone}}</span>
+                <span class="theme-published-time">{{vm.thread.createDate | date: 'yyyy-MM-dd HH:mm'}}</span>
+
+                <div class="theme-content-center">
+                    <div class="theme-content" ng-bind-html="vm.thread.content"></div>
+                    <a class="theme-content-href" href="#theme-reply">点击评论</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="theme-comments">
+            <div class="theme-coments-header">全部评论</div>
+
+            <div class="theme-comment-content" ng-if="vm.postAll.length == 0"><p class="theme-comment-content-default">
+                暂无评论，赶快发表评论吧</p></div>
+
+
+            <div ng-if="vm.postAll.length !== 0" class="theme-comment-item" ng-repeat="item in vm.postAll">
+                <img class="theme-comment-author-avatar"
+                     ng-src="{{item.creator.avatarUrl || 'https://www.battlenet.com.cn/forums/static/images/avatars/avatar-default.png'}}"
+                     width="70" height="70"/>
+                <div class="theme-comment-author">{{item.creator.nickName || item.creator.phone}}</div>
+                <div class="theme-comment-create-time">{{item.createDate | date:"yyyy/MM/dd HH:mm"}}</div>
+                <div class="theme-comment-content" ng-bind-html="item.content"></div>
+            </div>
+        </div>
+
+        <div class="theme-reply" id="theme-reply">
+            <p>你的评论</p>
+            <textarea ng-model="vm.replyContent"></textarea>
+            <div class="theme-reply-submit">
+                <button class="btn" ng-click="vm.replySubmit()" ng-disabled="vm.replyContent.length == 0">发表评论</button>
+            </div>
+        </div>
+
+        <!--<div class="theme-page-section">-->
+        <!--<div class="selection-container">-->
+        <!--<button class="forums-next-page-btn" type="button" ng-click="vm.pageChange(-1)">上一页-->
+        <!--</button>&nbsp;&nbsp;-->
+        <!--<span class="page-number">{{vm.page}}</span>&nbsp;&nbsp;-->
+        <!--<button class="forums-next-page-btn" type="button" ng-click="vm.pageChange(1)" ng-disabled="vm.isLast">-->
+        <!--下一页-->
+        <!--</button>-->
+        <!--<div class="page-input">-->
+        <!--<span>到</span><input type="text" ng-model="vm.toPageNumber"><span>页</span>-->
+        <!--</div>-->
+        <!--<button ng-click="vm.toPage()">确定</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <news-page-num ng-show="vm.totalPages > 1" total-pages="vm.totalPages"
+                       to-page="vm.toPage(page)"></news-page-num>
+    </div>
+    <!--<div class="theme-content-right">
+
+    </div>-->
+</div>
+</div>
+</div>
+
+<!--移动端-->
+<div class="bsb-station-forum-thread-mobile">
+    <div class="bsb-station-forum-thread-header-mobile">
+        <div class="forum-thread-title-mobile">{{vm.thread.title}}</div>
+    </div>
+    <div class="station-forum-thread-info-wrapper-mobile">
+        <img class="station-forum-thread-avatar-mobile"
+             ng-src="{{vm.threadCreator.avatarUrl ? vm.threadCreator.avatarUrl : '/content/images/station/mobile/station-forum-avatar.png'}}"/>
+        <div class="station-forum-thread-info-mobile">
+            <div class="station-forum-thread-author-mobile">{{vm.thread.authorName}}</div>
+            <div class="station-forum-thread-time-mobile">{{vm.thread.createDate | date: 'yyyy-MM-dd HH:mm'}}</div>
+        </div>
+    </div>
+    <div class="bsb-station-forum-thread-content-mobile" ng-bind-html="vm.thread.content">
+    </div>
+    <div class="station-theme-comments-mobile">
+        <div class="station-theme-comments-header-mobile">
+            全部评论
+        </div>
+        <div class="station-theme-comments-card-mobile" ng-repeat="item in vm.postAll">
+            <div class="station-theme-comments-card-header-mobile">
+                <img class="station-theme-comments-card-avatar-mobile" ng-src="{{item.creator.avatarUrl ? item.person.avatarUrl :'content/images/bsb/bsb-171-2.svg'}}" alt="">
+                <div class="station-theme-comments-card-author-mobile">{{item.authorName}}</div>
+                <div class="station-theme-comments-card-time-mobile">{{item.createDate | date:"yyyy/MM/dd HH:mm"}}</div>
+            </div>
+            <div class="station-theme-comments-card-content-mobile" ng-bind-html="item.content">
+            </div>
+        </div>
+    </div>
+    <div class="station-theme-reply-mobile-wrapper">
+    <div class="station-theme-reply-mobile">
+        <input type="text" class="station-forum-input-mobile" ng-model="vm.replyContent"
+               placeholder="说点什么..." onfocus="this.placeholder=''" onblur="this.placeholder='说点什么...'">
+        <div class="station-forum-reply-mobile">
+            <div class="station-forum-reply-btn-mobile" ng-click="vm.replySubmit()">
+                <span>发送</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+

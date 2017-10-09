@@ -1,0 +1,10 @@
+<div class="my-team">
+    <team-binding-id ng-if="vm.isTeamBindingId"></team-binding-id>
+    <organize-team ng-if="vm.isOrganizeTeam" is-create-team="vm.isCreateTeam"
+                   is-organize-team="vm.isOrganizeTeam"></organize-team>
+    <create-team ng-if="vm.isCreateTeam"></create-team>
+    <team-member ng-if="vm.isTeamMember" team="vm.team" team-member-state="vm.teamMemberState"
+                 is-registrations="vm.isRegistrations"></team-member>
+    <team-captain ng-if="vm.isTeamCaptain" team="vm.team" is-registrations="vm.isRegistrations" team-member-state="vm.teamMemberState"></team-captain>
+</div>
+<home-footer></home-footer>

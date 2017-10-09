@@ -1,0 +1,260 @@
+<div class="competing-info">
+    <div class="person-register-wrap">
+        <div ng-if="vm.isLogIn">
+            <div ng-if="!vm.isPersonJoin && !vm.isTeamJoin" class="competing-info-register">
+                未参加任何赛事
+            </div>
+            <div ng-if="!(!vm.isPersonJoin && !vm.isTeamJoin)">
+                <div class="person-register-title">
+                    我的参赛信息
+                </div>
+                <div class="person-register-warn">
+                    2017年x月x日x时，报名截止后，无法修改报名信息
+                </div>
+                <div class="competing-info-btn">
+                    <button ng-disabled="!vm.isPersonJoin" ng-class="{'competing-info-btn-active':vm.isPersonRegister}"
+                            ng-click="vm.isPersonRegister = true">个人赛
+                    </button>
+                    <button ng-disabled="!vm.isTeamJoin" ng-class="{'competing-info-btn-active':!vm.isPersonRegister}"
+                            ng-click="vm.isPersonRegister = false">团队赛
+                    </button>
+                </div>
+                <div class="person-register" ng-if="vm.isPersonRegister">
+                    <div class="person-register-warn">
+                        注： 个人赛将全程采用线下对战
+                    </div>
+                    <form class="person-register-form" role="form" ng-submit="vm.login($event)">
+                        <div class="person-register-city">
+                            *参赛城市
+                            <div class="person-register-select clearfloat" ng-init="vm.citiesShow = false">
+                                <input disabled ng-style="{'background-color': 'rgba(255, 255, 255, 0.1)'}"
+                                       class="input" type="text" placeholder="请选择参赛城市" ng-model="vm.personCityName">
+                                <!--<div class="select-btn" ng-click="vm.citiesShow=!vm.citiesShow">
+                                    <span class="arrow"></span>
+                                </div>
+                                <ul class="clearfloat" ng-show="vm.citiesShow">
+                                    <li ng-repeat="city in vm.cities" ng-click="vm.personChooseCity(city);vm.citiesShow = false">
+                                        {{city.name}}
+                                    </li>
+                                </ul>-->
+                            </div>
+                        </div>
+                        <div class="person-register-adress clearfloat">
+                            *比赛地点
+                            <div class="person-register-Info">北京市富海大厦</div>
+                        </div>
+                        <div class="person-register-name clearfloat">
+                            *姓名
+                            <div class="input-wrap" ng-init="vm.nameIsEmpty = true">
+                                <input ng-blur="vm.testName();vm.nameIsEmpty = vm.name" ng-model="vm.name" class="input"
+                                       type="text"
+                                       placeholder="请输入姓名">
+                                <div class="person-register-input-warn">
+                                    <span ng-hide="vm.nameIsEmpty">*不能为空</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person-register-phone clearfloat">
+                            *手机号
+                            <div class="person-register-Info">{{vm.personPhone}}（已绑定）</div>
+                        </div>
+                        <div class="person-register-ID clearfloat">
+                            *身份证
+                            <div class="input-wrap" ng-init="vm.IDIsEmpty = true">
+                                <input ng-blur="vm.personTestID();vm.IDIsEmpty = vm.ID" ng-model="vm.ID" class="input"
+                                       type="text"
+                                       placeholder="请输入身份证号码">
+                                <div class="person-register-input-warn">
+                                    <span ng-hide="vm.IDIsEmpty">*不能为空</span>
+                                    <span ng-show="vm.personInfoWarn.ID">*请输入正确格式</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person-register-email clearfloat">
+                            *邮箱
+                            <div class="input-wrap" ng-init="vm.emailIsEmpty = true">
+                                <input ng-blur="vm.personTestEmail();vm.emailIsEmpty = vm.email" ng-model="vm.email"
+                                       class="input"
+                                       type="text" placeholder="请输入邮箱">
+                                <div class="person-register-input-warn">
+                                    <span ng-hide="vm.emailIsEmpty">*不能为空</span>
+                                    <span ng-show="vm.personInfoWarn.email">*请输入正确格式</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person-register-account clearfloat">
+                            *国服账号
+                            <div class="input-wrap" ng-init="vm.accountIsEmpty = true">
+                                <input ng-blur="vm.testAccount();vm.accountIsEmpty = vm.account" ng-model="vm.account"
+                                       class="input"
+                                       type="text" placeholder="请输入国服CS:GO账号">
+                                <div class="person-register-input-warn">
+                                    <span ng-hide="vm.accountIsEmpty">*不能为空</span>
+                                    <span ng-show="vm.personInfoWarn.account">*请输入正确格式</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="person-register-btn" ng-click="vm.personSubmit()">保存修改</button>
+                        <div class="person-register-warn" ng-show="vm.personWarn">
+                            *请填写正确个人信息
+                        </div>
+                    </form>
+                </div>
+                <div class="team-register" ng-if="!vm.isPersonRegister">
+                    <div class="team-register-captain">
+                        <div class="team-register-team-name" ng-init="vm.teamNameIsValue = true">
+                            *战队名称
+                            <input class="team-register-input"
+                                   type="text"
+                                   ng-blur="vm.teamNameIsValue = vm.captain.teamName"
+                                   placeholder="请输入战队名称"
+                                   ng-model="vm.captain.teamName">
+                            <div class="team-register-captain-warn">
+                                <div ng-hide="vm.teamNameIsValue">*不能为空</div>
+                            </div>
+                        </div>
+                        <div class="team-register-name" ng-init="vm.captainNameIsValue = true">
+                            *队长姓名
+                            <input class="team-register-input"
+                                   type="text"
+                                   ng-blur="vm.captainNameIsValue = vm.captain.name"
+                                   placeholder="请输入队长姓名"
+                                   ng-model="vm.captain.name">
+                            <div class="team-register-captain-warn">
+                                <div ng-hide="vm.captainNameIsValue">*不能为空</div>
+                            </div>
+                        </div>
+                        <div class="team-register-phone">
+                            *手机号
+                            <div class="team-register-Info">{{vm.captainPhone}}（已绑定）</div>
+                        </div>
+                        <div class="team-register-ID" ng-init="vm.captainIDIsValue = true">
+                            *身份证
+                            <input class="team-register-input"
+                                   type="text"
+                                   placeholder="请输入身份证号码"
+                                   ng-blur="vm.captainIDIsValue = vm.captain.ID"
+                                   ng-pattern="/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/"
+                                   ng-model="vm.captain.ID">
+                            <div class="team-register-captain-warn">
+                                <div ng-show="vm.captainIDIsValue === ''">*不能为空</div>
+                                <div ng-show="vm.captainIDIsValue === undefined">*请输入正确格式</div>
+                            </div>
+                        </div>
+                        <div class="team-register-email" ng-init="vm.captainEmailIsValue = true">
+                            *邮箱
+                            <input class="team-register-input"
+                                   type="text"
+                                   placeholder="请输入联系邮箱"
+                                   ng-blur="vm.captainEmailIsValue = vm.captain.email"
+                                   ng-pattern="/^([\S])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/"
+                                   ng-model="vm.captain.email">
+                            <div class="team-register-captain-warn">
+                                <div ng-show="vm.captainEmailIsValue === ''">*不能为空</div>
+                                <div ng-show="vm.captainEmailIsValue === undefined">*请输入正确格式</div>
+                            </div>
+                        </div>
+                        <div class="team-register-account" ng-init="vm.captainAccountIsValue = true">
+                            *国服账号
+                            <input class="team-register-input"
+                                   type="text"
+                                   placeholder="请输入国服CS:GO账号"
+                                   ng-blur="vm.captainAccountIsValue = vm.captain.account"
+                                   ng-model="vm.captain.account">
+                            <div class="team-register-captain-warn">
+                                <div ng-hide="vm.captainAccountIsValue">*不能为空</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-register-member clearfloat">
+                        <div class="team-register-member-title">
+                            成员信息
+                        </div>
+                        <div class="team-register-member-info" ng-repeat="member in vm.member">
+                            <div class="team-register-member-title">
+                                {{member.title}}
+                            </div>
+                            <div class="team-register-member-name clearfloat" ng-init="member.nameIsvalue = true">
+                                *姓名
+                                <input class="member-input"
+                                       type="text"
+                                       placeholder="请输入姓名"
+                                       ng-blur="member.nameIsvalue = member.name"
+                                       ng-model="member.name">
+                                <div class="team-register-member-warn">
+                                    <div ng-hide="member.nameIsvalue" ng-if="member.title.indexOf('队员') != -1">*不能为空
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-register-member-phone clearfloat" ng-init="member.phoneIsValue = true">
+                                *手机号
+                                <input class="member-input"
+                                       type="text"
+                                       placeholder="请输入手机号码"
+                                       ng-blur="member.phoneIsValue = member.phone"
+                                       ng-pattern="/^1[34578]\d{9}$/"
+                                       ng-model="member.phone">
+                                <div class="team-register-member-warn">
+                                    <div ng-show="member.phoneIsValue === ''" ng-if="member.title.indexOf('队员') != -1">
+                                        *不能为空
+                                    </div>
+                                    <div ng-show="member.phoneIsValue === undefined">*请输入正确格式</div>
+                                </div>
+                            </div>
+                            <div class="team-register-member-ID clearfloat" ng-init="member.IDIsValue = true">
+                                *身份证
+                                <input class="member-input"
+                                       type="text"
+                                       placeholder="请输入身份证号码"
+                                       ng-blur="member.IDIsValue = member.ID"
+                                       ng-pattern="/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/"
+                                       ng-model="member.ID">
+                                <div class="team-register-member-warn">
+                                    <div ng-show="member.IDIsValue === ''" ng-if="member.title.indexOf('队员') != -1">
+                                        *不能为空
+                                    </div>
+                                    <div ng-show="member.IDIsValue === undefined">*请输入正确格式</div>
+                                </div>
+                            </div>
+                            <div class="team-register-member-email clearfloat" ng-init="member.emailIsValue = true">
+                                *邮箱
+                                <input class="member-input"
+                                       type="text"
+                                       placeholder="请输入联系邮箱"
+                                       ng-blur="member.emailIsValue = member.email"
+                                       ng-pattern="/^([\S])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/"
+                                       ng-model="member.email">
+                                <div class="team-register-member-warn">
+                                    <div ng-show="member.emailIsValue === ''" ng-if="member.title.indexOf('队员') != -1">
+                                        *不能为空
+                                    </div>
+                                    <div ng-show="member.emailIsValue === undefined">*请输入正确格式</div>
+                                </div>
+                            </div>
+                            <div class="team-register-member-name clearfloat" ng-init="member.accountIsValue = true">
+                                *国服账号
+                                <input class="member-input"
+                                       type="text"
+                                       placeholder="请输入CS:GO国服账号"
+                                       ng-blur="member.accountIsValue = member.account"
+                                       ng-model="member.account">
+                                <div class="team-register-member-warn">
+                                    <div ng-if="member.title.indexOf('队员') != -1" ng-hide="member.accountIsValue">
+                                        *不能为空
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="team-register-btn" ng-click="vm.submit()">保存修改</button>
+                    <div class="team-register-warn" ng-show="vm.warn">
+                        *请填写正确个人信息
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<home-footer></home-footer>
+

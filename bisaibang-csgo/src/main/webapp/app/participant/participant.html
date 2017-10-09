@@ -1,0 +1,50 @@
+<!-- https://www.battlenet.com.cn/forums/zh/bnet/9318529/ -->
+<div ng-cloak>
+    <div class="participant-container">
+        <home-menu></home-menu>
+        <div class="container" style="min-height: 600px; vertical-align: middle;margin: 0 auto;">
+            <div class="home-bracket-content">
+                <span class="tip">对阵图可拖动</span>
+                <div class="tab-title homebra">
+                    <div ng-click="vm.changeGroup(1)" ng-class="{'participant-active': vm.groupNum === 1}"><span>A组</span></div>
+                    <div ng-click="vm.changeGroup(2)" ng-class="{'participant-active': vm.groupNum === 2}"><span>B组</span></div>
+                    <div ng-click="vm.changeGroup(3)" ng-class="{'participant-active': vm.groupNum === 3}"><span>C组</span></div>
+                    <div ng-click="vm.changeGroup(4)" ng-class="{'participant-active': vm.groupNum === 4}"><span>D组</span></div>
+                    <div ng-click="vm.changeGroup(5)" ng-class="{'participant-active': vm.groupNum === 5}"><span>E组</span></div>
+                    <div ng-click="vm.changeGroup(6)" ng-class="{'participant-active': vm.groupNum === 6}"><span>F组</span></div>
+                    <div ng-click="vm.changeGroup(7)" ng-class="{'participant-active': vm.groupNum === 7}"><span>G组</span></div>
+                    <div ng-click="vm.changeGroup(8)" ng-class="{'participant-active': vm.groupNum === 8}"><span>H组</span></div>
+                </div>
+                <div class="home-bracket-all-wrap" ng-switch="vm.groupNum" style="overflow: hidden;">
+                    <iframe width="1200px" height="600px" ng-switch-when="1" scrolling="no"
+                            style="border:none;"
+                            src="https://www.bisaibang.com/widget/tournament/bracket/3235"></iframe>
+                    <iframe width="1200px" height="600px" ng-switch-when="2" scrolling="no"
+                            style="border:none;"
+                            src="https://www.bisaibang.com/widget/tournament/bracket/3263"></iframe>
+                    <iframe width="1200px" height="600px" ng-switch-when="3" scrolling="no"
+                            style="border:none;"
+                            src="https://www.bisaibang.com/widget/tournament/bracket/3237"></iframe>
+                    <iframe width="1200px" height="600px" ng-switch-when="4" scrolling="no"
+                            style="border:none;"
+                            src="https://www.bisaibang.com/widget/tournament/bracket/3238"></iframe>
+                    <iframe width="1200px" height="600px" ng-switch-when="5" scrolling="no"
+                            style="border:none;"
+                            src="https://www.bisaibang.com/widget/tournament/bracket/3239"></iframe>
+                    <iframe width="1200px" height="600px" ng-switch-when="6" scrolling="no"
+                            style="border:none;"
+                            src="https://www.bisaibang.com/widget/tournament/bracket/3292"></iframe>
+                    <iframe width="1200px" height="600px" ng-switch-when="7" scrolling="no"
+                            style="border:none;"
+                            src="https://www.bisaibang.com/widget/tournament/bracket/3241"></iframe>
+                    <iframe width="1200px" height="600px" ng-switch-when="8" scrolling="no"
+                            style="border:none;"
+                            src="https://www.bisaibang.com/widget/tournament/bracket/3242"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<home-footer></home-footer>

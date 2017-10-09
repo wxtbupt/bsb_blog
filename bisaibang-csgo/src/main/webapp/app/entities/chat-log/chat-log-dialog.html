@@ -1,0 +1,44 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myChatLogLabel" data-translate="bsbmsoneApp.chatLog.home.createOrEditLabel">Create or edit a Chat Log</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.chatLog.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.chatLog.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bsbmsoneApp.chatLog.message" for="field_message">Message</label>
+            <input type="text" class="form-control" name="message" id="field_message"
+                    ng-model="vm.chatLog.message"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="bsbmsoneApp.chatLog.toWhom" for="field_toWhom">To Whom</label>
+            <select class="form-control" id="field_toWhom" name="toWhom" ng-model="vm.chatLog.toWhom" ng-options="user as user.login for user in vm.users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="bsbmsoneApp.chatLog.fromWhom" for="field_fromWhom">From Whom</label>
+            <select class="form-control" id="field_fromWhom" name="fromWhom" ng-model="vm.chatLog.fromWhom" ng-options="user as user.login for user in vm.users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

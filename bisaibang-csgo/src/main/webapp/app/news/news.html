@@ -1,0 +1,82 @@
+<!--<div class="news" ng-cloak="">
+    <home-menu></home-menu>
+    <div class="homepage homepage-size">
+        <div class="real-news">
+            <div class="container">
+                <div class="real-news-content">
+                    &lt;!&ndash;<div class="real-news-top3pic">&ndash;&gt;
+                        &lt;!&ndash;<div class="real-news-top3pic-pic"></div>&ndash;&gt;
+                        &lt;!&ndash;<div class="real-news-top3pic-pic middle-pic"></div>&ndash;&gt;
+                        &lt;!&ndash;<div class="real-news-top3pic-pic"></div>&ndash;&gt;
+                    &lt;!&ndash;</div>&ndash;&gt;
+                    <div class="extra-news-content">
+                        <ul class="nav">
+                            <li ng-repeat="news in vm.articles">
+                                <a ui-sref="news-page({id:news.id})">
+                                    &lt;!&ndash;<div class="news-face-pic">&ndash;&gt;
+                                        &lt;!&ndash;<div class="img">&ndash;&gt;
+                                            &lt;!&ndash;<div class="img-left-fix">&ndash;&gt;
+                                                &lt;!&ndash;<div class="news-image" style="background-image: url('{{news.thumbnailUrl.length > 5 ? news.thumbnailUrl:'http://hearthstone.nos.netease.com/1/zz/201701/05zm260x130.jpg?imageView=yes&amp;thumbnail=260x130'}}')"></div>&ndash;&gt;
+                                            &lt;!&ndash;</div>&ndash;&gt;
+                                        &lt;!&ndash;</div>&ndash;&gt;
+                                        &lt;!&ndash;<i class="image-border"></i>&ndash;&gt;
+                                    &lt;!&ndash;</div>&ndash;&gt;
+                                    <div class="news-face-pic">
+                                        <div class="img-left">
+                                            <div class="news-image-piece" style="background-image: url('{{news.thumbnailUrl.length > 5 ? news.thumbnailUrl:'http://hearthstone.nos.netease.com/1/zz/201701/05zm260x130.jpg?imageView=yes&amp;thumbnail=260x130'}}')"></div>
+                                        </div>
+                                        <div class="img-right">
+                                            <div class="image-transform-fix">
+                                                <div class="news-image-piece" style="background-image: url('{{news.thumbnailUrl.length > 5 ? news.thumbnailUrl:'http://hearthstone.nos.netease.com/1/zz/201701/05zm260x130.jpg?imageView=yes&amp;thumbnail=260x130'}}')"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title">{{ news.title }}
+                                        &lt;!&ndash;<div class="title-picture"><span>{{ news.commentNumber || 0 }}</span></div>&ndash;&gt;
+                                        <div class="title-picture">发布日期：{{ news.createDate| date:'yyyy/MM/dd' }}<span class="u-font u-font-hs"></span></div>
+                                    </div>
+                                    <p class="des" ng-bind-html="news.introduction"></p>
+                                    &lt;!&ndash;<p class="time">{{ news.createDate| date:'yyyy/MM/dd' }}<span class="u-font u-font-hs"></span></p>&ndash;&gt;
+                                </a>
+                            </li>
+                            <li class="clearfix"></li>
+                        </ul>
+                        <news-page-num ng-show="vm.totalPages > 1" total-pages="vm.totalPages"
+                                       to-page="vm.loadPage(page)"></news-page-num>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<div class="csgo-news-wrap">
+    <div class="csgo-news">
+        <div class="news-title">
+            <span>赛事资讯</span>
+            <span>news</span>
+        </div>
+        <ul>
+            <li ng-repeat="news in vm.articles" ui-sref="news-page({id:news.id})">
+                <img ng-src="{{news.thumbnailUrl.length > 5 ? news.thumbnailUrl:'/content/images/news/news-list-img.jpg'}}" alt="">
+                <div class="news-list-text">
+                    <div class="news-list-text-title">
+                        {{ news.title }}
+                    </div>
+                    <div class="news-list-text-date">
+                        {{ news.createDate| date:'yyyy/MM/dd' }}
+                    </div>
+                    <div class="news-list-text-introduce" ng-bind-html="news.introduction">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="news-list-scroll" ng-hide="vm.page == vm.totalPages" ng-click="vm.loadPage()">
+            下拉加载更多
+            <div class="news-list-arrow">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<home-footer></home-footer>

@@ -1,0 +1,44 @@
+<div class="bsb-station">
+<div class="container">
+    <div class="station-forum-create">
+        <div class="theme-content-container">
+            <div class="forum-title"></div>
+            <label for="theme-header">标题：</label>
+            <div class="theme-header-content">
+                <input id="theme-header" type="text" ng-model="vm.threadHead"/>
+            </div>
+            <br>
+            <img class="thread-avatar" ng-src="{{vm.avatar}}">
+            <div class="theme-content" style="display: inline-block;width: 82%">
+                <text-angular
+                    ta-toolbar="[['h1','h2','h3'], ['bold', 'italics', 'underline','strikeThrough', 'insertImage', 'insertLink'], ['ul', 'ol', 'redo', 'undo', 'clear']]"
+                    ta-text-editor-class="form-content" ng-model="vm.threadBody" ta-paste="vm.stripFormat($html)"
+                    id="create-thread-text"></text-angular>
+            </div>
+            <button class="theme-submit btn" ng-click="vm.postThread()" ng-disabled="vm.threadBody.length == 0 || vm.threadHead.length == 0">创建</button>
+        </div>
+
+     </div>
+</div>
+</div>
+
+
+
+
+<!--移动端-->
+<div class="station-create-thread-mobile">
+    <div class="create-theme-header-mobile">
+        <input id="theme-header-mobile" placeholder="标题" type="text" ng-model="vm.threadHead"/>
+    </div>
+    <div class="theme-header-content-mobile">
+        <div class="theme-content" style="display: inline-block">
+            <text-angular
+                ta-toolbar=" [['h1','h2','h3'], ['bold', 'italics', 'underline', 'insertImage', 'insertLink']]"
+                ta-text-editor-class="form-content" ng-model="vm.threadBody" ta-paste="vm.stripFormat($html)"
+                id="create-thread-text-mobile"></text-angular>
+        </div>
+    </div>
+    <div class="create-thread-bottom-mobile">
+      <button class="theme-submit-mobile btn" ng-click="vm.postThread()" ng-disabled="vm.threadBody.length == 0 || vm.threadHead.length == 0">发布</button>
+    </div>
+</div>

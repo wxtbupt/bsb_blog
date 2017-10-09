@@ -1,0 +1,69 @@
+<div class="theme-reply-item theme-content">
+    <div class="row">
+        <div class="col-xs-2 col-md-1">
+            <div class="author-avatar">
+                <img ng-src="{{vm.comment.creator.avatarUrl || 'https://www.battlenet.com.cn/forums/static/images/avatars/avatar-default.png'}}" width="70" height="70" />
+            </div>
+        </div>
+        <div class="col-xs-10 col-md-11">
+            <div class="row">
+                <div class="col-xs-12 col-md-1">
+                    <div class="row">
+                        <div class="theme-reply-item-author">
+                            <span class="author-name">{{vm.comment.creator.nickName || vm.comment.creator.phone}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2 pull-right">
+                    <div class="theme-publish-date">{{vm.comment.createDate | date: 'yyyy年MM月dd日 HH时mm分'}}</div>
+                    <div ng-show="!vm.showBox">
+                        <a class="forums-theme-reply-btn pull-right" ng-click="vm.replyComment()">回复</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-9">
+                    <div class="theme-reply-item-content">
+                        <span ng-bind-html="vm.comment.content"></span>
+                        <div class="theme-reply-inner-reply" ng-if="vm.innerCommentAll.length > 0 || vm.showBox">
+                            <!--<p ng-repeat="innerPost in vm.innerPostAll">-->
+                            <!--<span>{{innerPost.authorName}}</span>:&nbsp;-->
+                            <!--<span>{{innerPost.content}}-->
+                            <!--<span class="pull-right">{{innerPost.createDate | date: 'yyyy/MM/dd HH:mm'}}</span>-->
+                            <!--</span>-->
+                            <!--</p>-->
+                            <div class="post-reply-item" ng-repeat="innerComment in vm.innerCommentAll">
+                                <div class="reply-text-box-avatar">
+                                    <div class="theme-reply-item-author clearfix">
+                                        <div class="author-avatar pull-left">
+                                            <img ng-src="{{innerComment.creator.avatarUrl || 'https://www.battlenet.com.cn/forums/static/images/avatars/avatar-default.png'}}" width="80" height="80"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply-text-box-input">
+                                    <div>
+                                        <span class="author-name">{{innerComment.creator.nickName || innerComment.creator.phone}}:&nbsp;</span>
+                                        <span>{{innerComment.content}}
+                                            <span class="post-date-time pull-right">{{innerComment.createDate | date: 'yyyy/MM/dd HH:mm'}}</span>
+                                        </span>
+                                    </div>
+                                    <div class="reply-post-btn-wrapper clearfix">
+                                        <button ng-show="!vm.showBox" class="reply-post-btn pull-right"
+                                                ng-click="vm.replyComment(innerComment.creator.nickName || innerComment.creator.phone)">回复
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="vm.showBox">
+                                <div class="text-right"><a ng-click="vm.replyComment()">收起</a></div>
+                                <div>
+                                    <reply-text-box-for-video level="12" video-id="vm.videoId"
+                                                              leader-post-id="vm.comment.id"
+                                                              comment-target="vm.commentTarget"></reply-text-box-for-video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

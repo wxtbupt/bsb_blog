@@ -1,0 +1,24 @@
+<div class="news-page-num-wrap">
+    <button ng-class="{'news-page-num-first-show':!vm.isPrevShow}" class="news-page-num-box news-page-num-btn" ng-click="vm.loadMore(vm.page-1)">&lt;</button>
+
+    <button ng-if="vm.isFirstShow" class="news-page-num-box news-page-num-btn" ng-click="vm.loadMore(1)">1</button>
+
+    <button ng-if="vm.isFirstShow" class="news-page-point">...</button>
+
+    <button ng-repeat="page in vm.pages" ng-class="{'news-page-num-btn-active':vm.page==page}" class="news-page-num-box news-page-num-btn" ng-click="vm.loadMore(page)">{{page}}</button>
+
+    <button ng-if="vm.isLastShow" class="news-page-point">...</button>
+
+    <button ng-if="vm.isLastShow" class="news-page-num-box news-page-num-btn" ng-click="vm.loadMore(vm.totalPages)">{{vm.totalPages}}</button>
+
+    <button ng-class="{'news-page-num-first-show':!vm.isNextShow}" class="news-page-num-box news-page-num-btn" ng-click="vm.loadMore(vm.page+1)">&gt;</button>
+</div>
+
+
+<!--&lt;!&ndash;移動端&ndash;&gt;
+<div class="news-page-num-wrap-mobile">
+    <button ng-class="{'news-page-num-first-show':!vm.isPrevShow}" class="news-page-num-box news-page-num-btn" ng-click="vm.loadMore(vm.page-1)">上一页</button>
+    <input type="number" min="1" max="vm.totalPages" ng-model="page" />
+    <button class="news-page-num-box news-page-num-btn" ng-click="vm.loadMore(page)">跳转</button>
+    <button ng-class="{'news-page-num-first-show':!vm.isNextShow}" class="news-page-num-box news-page-num-btn" ng-click="vm.loadMore(vm.page+1)">下一页</button>
+</div>-->

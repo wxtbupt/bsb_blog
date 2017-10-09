@@ -1,0 +1,86 @@
+<div class="form-home-menu">
+    <home-menu></home-menu>
+</div>
+<div class="my-notice-page">
+    <div class="personInfo" style="min-height: 720px">
+        <h3 class="my-notice-header text-left">我的提醒</h3>
+        <!--我发送的-->
+        <!--<div class="my-notice-item" ng-repeat="np in vm.notices | orderBy: np.notice.createDate:'desc'">-->
+        <div class="my-notice-item" ng-repeat="np in vm.notices | orderBy: vm.order:'desc'">
+            <div ng-if="np.notice.content == '您已被移出小队'">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h4 class="my-notice-item-invite">您已被 {{np.notice.sender.nickName}} 移出小队</h4>
+                        <b class="my-notice-item-datetime">{{np.notice.createDate | date:'yyyy-MM-dd HH:mm'}}</b>
+                    </div>
+                    <div class="col-md-7">
+                        <div>
+                            <span ng-if="np.notice.readAndDenial === true && np.notice.refuse === 'N'">对方已拒绝</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="np.notice.content !== '您已被移出小队'">
+                <div ng-if="vm.nickName == np.notice.sender.nickName">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h4 class="my-notice-item-invite">我 邀请 {{np.notice.receiver.nickName}} 加入队伍</h4>
+                            <b class="my-notice-item-datetime">{{np.notice.createDate | date:'yyyy-MM-dd HH:mm'}}</b>
+                        </div>
+                        <div class="col-md-7">
+                            <div>
+                                <span ng-if="np.notice.readAndDenial === false && np.notice.refuse === 'N'">对方未查看</span>
+                                <span ng-if="np.notice.agree === 'A'">对方已接受</span>
+                                <span ng-if="np.notice.readAndDenial === true && np.notice.refuse === 'N'">对方已拒绝</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div ng-if="vm.nickName == np.notice.receiver.nickName">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h4 class="my-notice-item-invite">{{np.notice.sender.nickName}} 邀请 你加入他的队伍</h4>
+                            <b class="my-notice-item-datetime">{{np.notice.createDate | date:'yyyy-MM-dd HH:mm'}}</b>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="my-notice-response-invite" ng-if="np.notice.readAndDenial === false && np.notice.agree === null">
+                                <button class="my-notice-agree-btn" type="button" ng-click="vm.agreeNotice(np.notice.id)">接受</button>
+                                <button class="my-notice-denial-btn" type="button" ng-click="vm.denialNotice(np.notice.id)">拒绝</button>
+                            </div>
+                            <div>
+                                <span ng-if="np.notice.agree === 'A'">已接受</span>
+                                <span ng-if="np.notice.readAndDenial === true">已拒绝</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--我接收的-->
+        <!-- <div ng-repeat="notice in vm.receiverNotice">
+             {{notice.sender.nickName}} 邀请 你加入他的队伍
+         </div>-->
+    </div>
+</div>
+
+<div class="footer" ng-cloak>
+    <div class="container">
+        <a href="http://www.blz.cn" target="_blank">
+            <img class="footer-company-logo" src="/content/images/footer/company-logo.png" alt="公司logo">
+        </a>
+        <a href="http://ow.blizzard.cn" target="_blank">
+            <img class="footer-game-logo" src="/content/images/footer/game-logo.png" alt="游戏logo">
+        </a>
+        <div class="footer-info">
+            <p>|&nbsp;&nbsp;&nbsp;<a href="mailto:owod@allied-esports.com">联系我们</a>&nbsp;&nbsp;&nbsp;|</p>
+            <span>联系邮箱：owod@allied-esports.com</span><br>
+            <span>&copy;2017暴雪娱乐有限公司版权所有 由天津联盟电竞互联网科技有限公司运营</span>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,41 @@
+<div class="content-wraper">
+    <h1 class="header-title">所有评论</h1>
+
+    <table class="jh-table table newsList">
+        <thead>
+        <tr jh-sort="vm.predicate" ascending="vm.reverse" class="ng-isolate-scope">
+
+            <!--<th jh-sort-by="id"><span class="ng-scope">ID</span> <span-->
+            <!--class="glyphicon glyphicon-sort"></span></th>-->
+            <th jh-sort-by="id"><span class="ng-scope">ID</span> <span
+                class="glyphicon glyphicon-sort"></span></th>
+            <th><span class="ng-scope">评论作者</span></th>
+            <th><span class="ng-scope">内容</span></th>
+            <th jh-sort-by="editDate"><span class="ng-scope">编辑时间</span> <span
+                class="glyphicon glyphicon-sort"></span></th>
+            <th><span class="ng-scope">删除评论</span></th>
+            <!--<th jh-sort-by="state"><span class="ng-scope">State</span> <span
+                class="glyphicon glyphicon-sort"></span></th>
+            <th jh-sort-by="creator.id"><span class="ng-scope">Creator</span> <span
+                class="glyphicon glyphicon-sort"></span></th>
+            <!--<th jh-sort-by="setNews"><span class="ng-scope">设置首页新闻</span> <span-->
+            <!--class="glyphicon glyphicon-sort"></span></th>-->
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="comment in vm.comments | orderBy:vm.predicate:(vm.reverse?'':'desc') track by comment.id" class="ng-scope">
+            <!--<td><a ui-sref="article-detail({id:article.id})">{{article.id}}</a></td>-->
+            <td>{{comment.id}}</td>
+            <td>{{comment.creator.nickName || comment.creator.phone}}</td>
+            <td>{{comment.content}}</td>
+            <td>{{comment.editDate | date:'yyyy/MM/dd HH:mm'}}</td>
+            <td ng-click="vm.deleteCommentById(comment.id)"><button class="btn">删除</button></td>
+            <!--<td>{{article.state}}</td>
+            <td>{{article.creator}}</td>
+            <!--<td><button class="orange-button" ng-click="vm.setHomeNews()">点我</button></td>-->
+
+        </tr><!-- end ngRepeat: article in vm.articles track by article.id -->
+        </tbody>
+    </table>
+</div>

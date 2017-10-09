@@ -1,0 +1,108 @@
+<div class="team-captain">
+    <div class="team-captain-header">
+        <home-menu></home-menu>
+        <div class="team-captain-header-content">
+            <div class="team-captain-title">
+                {{vm.team.captain.team.name}}
+            </div>
+            <div class="team-captain-share">
+                <span>分享到：</span>
+                <baidu-share team-member-state="vm.teamMemberState"></baidu-share>
+                <copy-url></copy-url>
+            </div>
+            <input class="team-captain-share-address" ng-model="vm.shareLink">
+            <div class="team-captain-explain">
+                将队伍链接发送给队友，队友可通过链接申请入队，当有新的入队申请时，您可在该页面查看并审批
+            </div>
+        </div>
+    </div>
+    <div class="team-captain-content">
+        <div class="team-captain-content-content">
+            <div class="team-captain-apply" ng-if="vm.team.applyMember.length>0 && vm.isRegistrations">
+                <span>入队申请</span>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>申请人</th>
+                        <th>战网ID</th>
+                        <th>第五赛季分数</th>
+                        <th>手机号</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="applyMember in vm.team.applyMember">
+                        <td>{{applyMember.name}}</td>
+                        <td>{{applyMember.nickName}}</td>
+                        <td>待审核</td>
+                        <td>{{applyMember.user.fullPhone}}</td>
+                        <td>
+                            <button ng-disabled="vm.team.member.length >= 7"
+                                    ng-style="{'cursor':vm.team.member.length >= 7?'not-allowed':'pointer'}"
+                                    class="team-captain-agree"
+                                    ng-click="vm.addTeamMember(applyMember.user.id)">同意
+                            </button>
+                            <button class="team-captain-refuse" ng-click="vm.deleteTeamApply(applyMember.user.id)">拒绝
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="team-captain-btn team-captain-sign-up"
+                 ng-if="vm.isRegistrations"
+                 ng-click="vm.register()">
+                报名参赛
+            </div>
+            <div class="team-captain-btn team-captain-sign-up"
+                 ng-if="!vm.isRegistrations"
+                 ng-click="vm.exitRegister()">
+                退出报名
+            </div>
+            <div class="team-captain-warn" ng-if="vm.warn">
+                *您的队伍人数需在6-8人
+            </div>
+            <div ng-if="vm.isRegistrations">报名后您就无法修改战队阵容及队员信息，请确认无误后再点击报名</div>
+            <div class="team-captain-team">
+                <span class="team-captain-arrow"></span>
+                <div class="team-captain-team-title">
+                    队伍成员
+                </div>
+                <div class="team-captain-card">
+                    <div class="team-captain-duty">
+                        队长
+                    </div>
+                    <div class="team-captain-information">
+                        <div class="team-captain-name"><span>姓名</span>{{vm.team.captain.name}}</div>
+                        <div class="team-captain-id"><span>战网ID</span>{{vm.team.captain.nickName}}</div>
+                        <div class="team-captain-score"><span>第五赛季最高分</span>待审核</div>
+                        <div class="team-captain-id-card"><span>身份证号</span>{{vm.team.captain.user.personalID}}</div>
+                        <div class="team-captain-phone"><span>手机号</span>{{vm.team.captain.user.fullPhone}}</div>
+                        <div class="team-captain-email"><span>邮箱</span>{{vm.team.captain.user.personalEmail}}</div>
+                        <div class="team-captain-delete team-captain-delete-hide" ng-if="vm.isRegistrations">将该队员踢出小队
+                        </div>
+                    </div>
+                </div>
+                <div class="team-captain-card" ng-repeat="member in vm.team.member">
+                    <div class="team-captain-duty">
+                        队员{{$index+1}}
+                    </div>
+                    <div class="team-captain-information">
+                        <div class="team-captain-name"><span>姓名</span>{{member.name}}</div>
+                        <div class="team-captain-id"><span>战网ID</span>{{member.nickName}}</div>
+                        <div class="team-captain-score"><span>第五赛季最高分</span>待审核</div>
+                        <div class="team-captain-id-card"><span>身份证号</span>{{member.user.personalID}}</div>
+                        <div class="team-captain-phone"><span>手机号</span>{{member.user.fullPhone}}</div>
+                        <div class="team-captain-email"><span>邮箱</span>{{member.user.personalEmail}}</div>
+                        <div class="team-captain-delete" ng-click="vm.deleteTeamMember(member.user.id)"
+                             ng-if="vm.isRegistrations">将该队员踢出小队
+                        </div>
+                    </div>
+                </div>
+                <div class="team-captain-btn" ng-click="vm.deleteTeam()" ng-if="vm.isRegistrations">
+                    解散队伍
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

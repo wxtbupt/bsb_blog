@@ -1,0 +1,15 @@
+<div class="post-reply-item">
+    <div class="reply-text-box-input">
+        <form name="form">
+            <textarea class="form-control"
+                      ng-model="vm.reply.content"
+                      required="required"
+                      placeholder="请输入评论内容">
+            </textarea>
+            <div class="content-editor-btn clearfix">
+                最多输入300字
+                <button type="button" class="forums-theme-reply-btn pull-right" ng-click="vm.submit()" ng-disabled="form.$invalid">提交评论</button>
+            </div>
+        </form>
+    </div>
+</div>

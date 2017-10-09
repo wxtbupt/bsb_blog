@@ -1,0 +1,32 @@
+<home-menu></home-menu>
+<div class="single-video">
+    <div class="sv-subnav"><a ui-sref="video">视频列表&nbsp;>&nbsp;</a>视频</div>
+    <div class="sv-main">
+        <div class="sv-video-area">
+            <div class="sv-video-title">{{vm.video.name}}</div>
+            <div class="sv-video" id="sv-video"></div>
+            <div class="sv-video-description">视频简介：
+                <span class="np-article" ng-bind-html="vm.video.introduction"></span>
+            </div>
+        </div>
+        <div class="line-part1 line-part">
+            <span class="common1">评论</span><span class="common2">共{{vm.totalElements || 0}}条评论</span>
+        </div>
+        <div class="video-reply-author">
+            <reply-text-box-for-video ng-if="vm.video" video-id="vm.video.id" level="11"></reply-text-box-for-video>
+        </div>
+        <div>
+            <div class="line-part2 line-part">
+                <span>最新评论</span>
+                <hr>
+            </div>
+            <video-reply-item ng-if="vm.video" video-id="vm.video.id" ng-repeat="comment in vm.commentAll" comment="comment"></video-reply-item>
+        </div>
+    </div>
+</div>
+<!--<div class="footer" ng-cloak>-->
+    <!--<span>新页脚</span>-->
+    <div class="forums-page-selection">
+        <news-page-num total-pages="vm.totalPages" to-page="vm.toPage(page)"></news-page-num>
+    </div>
+<!--</div>-->

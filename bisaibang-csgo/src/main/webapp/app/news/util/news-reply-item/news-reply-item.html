@@ -1,0 +1,40 @@
+<div class="theme-reply-item theme-content">
+    <div class="theme-reply-item-author">
+        <span class="author-name">{{vm.comment.creator.nickName || vm.comment.creator.phone}}</span>
+    </div>
+    <div>
+        <div class="theme-publish-date">
+            {{vm.comment.createDate | date: 'yyyy年MM月dd日 HH时mm分'}}
+            <a class="pull-right" ng-show="!vm.showBox" ng-click="vm.replyComment()">回复</a>
+        </div>
+    </div>
+    <div class="theme-reply-item-content">
+        <span ng-bind-html="vm.comment.content"></span>
+        <div class="theme-reply-inner-reply" ng-if="vm.innerCommentAll.length > 0 || vm.showBox">
+            <div class="post-reply-item" ng-repeat="innerComment in vm.innerCommentAll">
+                <div class="reply-text-box-input">
+                    <div>
+                        <span
+                            class="author-name">{{innerComment.creator.nickName || innerComment.creator.phone}}:&nbsp;</span>
+                        <span>{{innerComment.content}}
+                                            <span class="post-date-time pull-right">{{innerComment.createDate | date: 'yyyy/MM/dd HH:mm'}}</span>
+                                        </span>
+                    </div>
+                    <div class="reply-post-btn-wrapper clearfix">
+                        <button ng-show="!vm.showBox" class="reply-post-btn pull-right"
+                                ng-click="vm.replyComment(innerComment.creator.nickName || innerComment.creator.phone)">
+                            回复
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="vm.showBox">
+                <div class="text-right"><a ng-click="vm.replyComment()">收起</a></div>
+                <div>
+                    <reply-text-box-for-news level="2" article-id="vm.articleId" leader-post-id="vm.comment.id"
+                                             comment-target="vm.commentTarget"></reply-text-box-for-news>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

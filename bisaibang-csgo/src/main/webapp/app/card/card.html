@@ -1,0 +1,71 @@
+<div ng-cloak>
+    <home-menu></home-menu>
+    <div class="container card">
+        <div class="card-content" ng-if="!vm.isTeam">
+            <div class="card-card-score" style="text-align: center;margin-top: 40px">
+                <div class="card-card-vs">
+                    没有报名
+                </div>
+            </div>
+        </div>
+        <div class="card-content" ng-if="!vm.hadCards && vm.isTeam">
+            <div class="card-card-score" style="text-align: center;margin-top: 40px">
+                <div class="card-card-vs">
+                    对阵暂无
+                </div>
+            </div>
+        </div>
+        <div class="card-content" ng-if="vm.hadCards && vm.isTeam">
+            <div class="card-tips" ng-if="vm.firstIsTrue"><i>下局对阵</i></div>
+            <div class="card-card" ng-if="vm.firstIsTrue">
+                <div class="card-card-time">
+                    {{vm.firstCard.content.split('=')[1]}}
+                </div>
+                <div class="card-card-score">
+                    <div class="card-card-top">
+                        {{vm.topTeam}}
+                    </div>
+                    <div class="card-card-vs">
+                        VS
+                    </div>
+                    <div class="card-card-bottom">
+                        {{vm.bottomTeam.split('=')[0]}}
+                    </div>
+                </div>
+            </div>
+            <div class="card-tips"><i>已完成对阵</i></div>
+            <div class="card-card" ng-repeat="card in vm.cards" ng-if="card.content.split(':')[0].split('-')[1] != 0 || card.content.split(':')[1].split('-')[0] != 0">
+                <div class="card-card-time">
+                    {{card.content.split('=')[1]}}
+                </div>
+                <div class="card-card-score">
+                    <div class="card-card-top">
+                        {{card.content.split(':')[0].split('-')[0]}}
+                    </div>
+                    <div class="card-card-vs">
+                        {{card.content.split(':')[0].split('-')[1]}} : {{card.content.split(':')[1].split('-')[0]}}
+                    </div>
+                    <div class="card-card-bottom">
+                        {{card.content.split(':')[1].split('-')[1].split('=')[0]}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="footer" ng-cloak>
+    <div class="container">
+        <a href="http://www.blz.cn" target="_blank">
+            <img class="footer-company-logo" src="/content/images/footer/company-logo.png" alt="公司logo">
+        </a>
+        <a href="http://ow.blizzard.cn" target="_blank">
+            <img class="footer-game-logo" src="/content/images/footer/game-logo.png" alt="游戏logo">
+        </a>
+        <div class="footer-info">
+            <p>|&nbsp;&nbsp;&nbsp;<a href="mailto:owod@allied-esports.com">联系我们</a>&nbsp;&nbsp;&nbsp;|</p>
+            <span>联系邮箱：owod@allied-esports.com</span><br>
+            <span>&copy;2017暴雪娱乐有限公司版权所有 由天津联盟电竞互联网科技有限公司运营 京ICP备17019145号</span>
+        </div>
+    </div>
+</div>

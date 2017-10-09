@@ -1,0 +1,175 @@
+<!--<div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-8 col-md-offset-2">-->
+            <!--<h1 data-translate="reset.request.title">Reset your password</h1>-->
+
+            <!--<div class="alert alert-danger" data-translate="reset.request.messages.notfound" ng-show="vm.errorEmailNotExists">-->
+                <!--<strong>E-Mail address isn't registered!</strong> Please check and try again.-->
+            <!--</div>-->
+
+            <!--<div class="alert alert-warning" ng-hide="vm.success">-->
+                <!--<p data-translate="reset.request.messages.info">Enter the e-mail address you used to register.</p>-->
+            <!--</div>-->
+
+            <!--<div class="alert alert-success" ng-show="vm.success == 'OK'">-->
+                <!--<p data-translate="reset.request.messages.success">Check your e-mails for details on how to reset your password.</p>-->
+            <!--</div>-->
+
+            <!--<form ng-show="!vm.success" name="form" role="form" novalidate ng-submit="vm.requestReset()" show-validation>-->
+                <!--<div class="form-group">-->
+                    <!--<label class="control-label" for="email" data-translate="global.form.email">E-mail</label>-->
+                    <!--<input type="email" class="form-control" id="email" name="email" placeholder="{{'global.form.email.placeholder' | translate}}"-->
+                           <!--ng-model="vm.resetAccount.email" ng-minlength=5 ng-maxlength=100 required>-->
+                    <!--<div ng-show="form.email.$dirty && form.email.$invalid">-->
+                        <!--<p class="help-block"-->
+                           <!--ng-show="form.email.$error.required" data-translate="global.messages.validate.email.required">-->
+                            <!--Your e-mail is required.-->
+                        <!--</p>-->
+                        <!--<p class="help-block"-->
+                           <!--ng-show="form.email.$error.email" data-translate="global.messages.validate.email.invalid">-->
+                            <!--Your e-mail is invalid.-->
+                        <!--</p>-->
+                        <!--<p class="help-block"-->
+                           <!--ng-show="form.email.$error.minlength" data-translate="global.messages.validate.email.minlength">-->
+                            <!--Your e-mail is required to be at least 5 characters.-->
+                        <!--</p>-->
+                        <!--<p class="help-block"-->
+                           <!--ng-show="form.email.$error.maxlength" data-translate="global.messages.validate.email.maxlength">-->
+                            <!--Your e-mail cannot be longer than 100 characters.-->
+                        <!--</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<button type="submit" ng-disabled="form.$invalid" class="btn btn-primary" data-translate="reset.request.form.button">Reset</button>-->
+            <!--</form>-->
+
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="container" class="reset-request-container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h1 translate="reset.request.title">Reset your password</h1>
+
+            <div class="alert alert-success" ng-show="vm.success" translate="">
+                <strong>重置密码成功! 即将跳转回主页！</strong>
+            </div>
+
+            <div class="alert alert-danger" ng-show="vm.error" translate="">
+                <strong>重置密码失败!</strong>
+            </div>
+            <div class="alert alert-danger" ng-show="vm.doNotMatch" translate="global.messages.error.dontmatch">
+                The password and its confirmation do not match!
+            </div>
+            <div class="alert alert-danger" ng-show="vm.ALIDAYU_Error" translate="">
+                未知原因,可能是号码格式错误!
+            </div>
+            <div class="alert alert-danger" ng-show="vm.userError" translate="">
+                无用户!
+            </div>
+            <div class="alert alert-danger" ng-show="vm.codeError" translate="">
+                验证码错误!
+            </div>
+            <div class="alert alert-success" ng-show="vm.sendSuccess" translate="">
+                验证码发送成功!
+            </div>
+
+
+            <form ng-show="!vm.success" name="form" role="form" novalidate show-validation>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label class="control-label" for="phone" translate="global.form.phone">Phone</label>
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="{{'global.form.phone.placeholder' | translate}}"
+                                   ng-model="vm.resetAccount.phone" ng-minlength=11 ng-maxlength=11 required>
+                            <div ng-show="form.phone.$dirty && form.phone.$invalid">
+                                <p class="help-block"
+                                   ng-show="form.phone.$error.required" translate="global.messages.validate.phone.required">
+                                    Your phone is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="form.phone.$error.minlength" translate="global.messages.validate.phone.minlength">
+                                    Your phone should be 11 numbers.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="form.phone.$error.maxlength" translate="global.messages.validate.phone.maxlength">
+                                    Your phone should be 11 numbers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--<button type="submit" ng-click="vm.getCode()" class="btn btn-warning register-get-code reset-request-getcode"-->
+                        <!--translate="">获取验证码</button>-->
+                        <button type="submit" ng-click="vm.getCode()" class="btn btn-warning register-get-code reset-request-getcode"
+                                ng-disabled="!vm.resetAccount.phone || vm.getcodeIsdisable">
+                            <span>{{ vm.btntime }}</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="confirmCode" translate="global.form.confirmCode">confirmCode</label>
+                    <input type="number" class="form-control" id="confirmCode" name="confirmCode" placeholder="{{'global.form.confirmCode.placeholder' | translate}}"
+                           ng-model="vm.resetAccount.code" ng-minlength=6 ng-maxlength=6 required>
+                    <div ng-show="form.confirmCode.$dirty && form.confirmCode.$invalid">
+                        <p class="help-block"
+                           ng-show="form.confirmCode.$error.required" translate="">
+                            您的验证码需要填写
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.confirmCode.$error.minlength" translate="">
+                            您的验证码为6位
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.confirmCode.$error.maxlength" translate="">
+                            您的验证码为6位
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="password" translate="global.form.newpassword">New password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="{{'global.form.newpassword.placeholder' | translate}}"
+                           ng-model="vm.resetAccount.newPassword" ng-minlength=4 ng-maxlength=50 required>
+                    <div ng-show="form.password.$dirty && form.password.$invalid">
+                        <p class="help-block"
+                           ng-show="form.password.$error.required" translate="global.messages.validate.newpassword.required">
+                            Your password is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.password.$error.minlength" translate="global.messages.validate.newpassword.minlength">
+                            Your password is required to be at least 4 characters.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.password.$error.maxlength" translate="global.messages.validate.newpassword.maxlength">
+                            Your password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                    <password-strength-bar password-to-check="vm.resetAccount.newPassword"></password-strength-bar>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="confirmPassword" translate="global.form.confirmpassword">New password confirmation</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="{{'global.form.confirmpassword.placeholder' | translate}}"
+                           ng-model="vm.confirmPassword" ng-minlength=4 ng-maxlength=50 required>
+                    <div ng-show="form.confirmPassword.$dirty && form.confirmPassword.$invalid">
+                        <p class="help-block"
+                           ng-show="form.confirmPassword.$error.required" translate="global.messages.validate.confirmpassword.required">
+                            Your confirmation password is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.confirmPassword.$error.minlength" translate="global.messages.validate.confirmpassword.minlength">
+                            Your confirmation password is required to be at least 4 characters.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.confirmPassword.$error.maxlength" translate="global.messages.validate.confirmpassword.maxlength">
+                            Your confirmation password cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                <button type="submit" ng-click="vm.requestReset()" ng-disabled="form.$invalid" class="btn btn-primary" translate="reset.request.form.button">Reset</button>
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div ng-cloak>
+    <home-menu></home-menu>
+    <!--<div class="introduction-content"></div>-->
+
+    <!--create by qb 2017.8.15-->
+    <div class="introduction-content">
+        <!--<carousel interval="myInterval">-->
+            <!--<slide ng-repeat="slide in slides" active="slide.active">-->
+                <!--<img ng-src="{{slide.image}}" style="margin:auto;">-->
+                <!--<div class="carousel-caption">-->
+                    <!--<p>{{slide.text}}</p>-->
+                <!--</div>-->
+            <!--</slide>-->
+        <!--</carousel>-->
+
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div ng-repeat='slide in vm.slides' ng-class="{active:vm.slides.indexOf(slide) == 1}" class="item">
+                    <img ng-src="{{slide.image}}" alt="{{vm.slides.indexOf(slide) + ' slide'}}">
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel"
+               data-slide="prev">&lsaquo;
+            </a>
+            <a class="carousel-control right" href="#myCarousel"
+               data-slide="next">&rsaquo;
+            </a>
+            <!--轮播缩略图-->
+            <div style="text-align:center;">
+                <div ng-repeat="slide in vm.slides" class="img-btn" ng-class="{active:slide.active}">
+                    <img ng-src="{{slide.image}}" alt="" class="min-img" ng-click="vm.toNowImg(vm.slides.indexOf(slide))">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<home-footer></home-footer>

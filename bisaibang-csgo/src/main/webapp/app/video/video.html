@@ -1,0 +1,39 @@
+<div ng-cloak>
+    <home-menu></home-menu>
+    <div class="video-content">
+        <div class="container">
+            <div class="video-tabs">
+                <div class="xietixing">
+                </div>
+                <div class="video-title">
+                    <p>视频中心</p>
+                </div>
+                <div class="search-theme pull-right video-search">
+                    <!--<i class="forums-search-thread-btn" ng-click="vm.searchVideo()"></i>-->
+                    <!--<input type="text" class="" placeholder="输入视频名称"  ng-model="vm.searchTitle">-->
+                </div>
+                <div class="tabs-search-container">
+                    <div class="tabs-group">
+                        <a  ng-class="{'selected':vm.currentVideoTag === 0}" ng-click="vm.currentVideoTag = 0;vm.getVideoAll()"><div class="tabs-group-item">全部</div></a>
+                        <a  ng-class="{'selected':vm.currentVideoTag === tag.id}" ng-repeat="tag in vm.tags" ng-click="vm.selectVideoTag(tag.id)"><div class="tabs-group-item">{{tag.name}}</div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="video-group">
+                <a ui-sref="single-video({id: {{video.id}}})" class="video-item" ng-repeat="video in vm.videoAll" style="background-image: url({{video.thumbnailUrl?video.thumbnailUrl:'content/images/video/video-bg.jpg'}})">
+                    <span class="sub-des">{{video.name}}</span>
+                    <div></div>
+                    <img src="content/images/video/threeicon2.png">
+                </a>
+            </div>
+            <div class="forums-page-selection">
+                <button class="forums-next-page-btn" type="button" ng-click="vm.lastPage()" ng-disabled="vm.isFirst">&lt;上一页</button>&nbsp;&nbsp;
+                <span>{{vm.page}}</span>&nbsp;&nbsp;
+                <button class="forums-next-page-btn" type="button" ng-click="vm.nextPage()" ng-disabled="vm.isLast">下一页&gt;</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer" ng-cloak>
+    <span>新页脚</span>
+</div>

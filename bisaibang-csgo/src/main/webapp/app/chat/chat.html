@@ -1,0 +1,50 @@
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-12 space-bottom10">
+            <form class="form-inline">
+                <button ng-click="vm.connectWs()"
+                        class="btn btn-default"
+                        type="submit">Connect
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="row space-bottom10">
+        <form>
+            <div class="col-md-6">
+                <input type="text"
+                       ng-model="vm.inputMessage"
+                       class="form-control"
+                       placeholder="enter message ...">
+            </div>
+            <div class="col-md-4">
+                <button ng-click="vm.sendMessage()"
+                        class="btn btn-default"
+                        type="submit">Send
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="conversation" class="table table-striped">
+                <thead>
+                <tr>
+                    <th width="10%">From</th>
+                    <th width="15%">To</th>
+                    <th width="60%">Message</th>
+                    <th width="10%">Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="mesg in vm.messages">
+                    <td>{{mesg.fromWhom}}</td>
+                    <td>{{mesg.toWhom}}</td>
+                    <td>{{mesg.message}}</td>
+                    <td>{{mesg.date}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

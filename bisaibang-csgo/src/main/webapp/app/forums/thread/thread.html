@@ -1,0 +1,83 @@
+<div class="forums-container">
+    <div class="form-home-menu">
+        <home-menu></home-menu>
+    </div>
+    <div class="forums-nav">
+        <div class="container">
+            <span><a ui-sref="forums">交流社区</a>&nbsp;>&nbsp;</span>
+            <span>
+              <a ng-if="vm.thread" ui-sref="{{vm.thread.section | forumsState}}">{{vm.thread.section | forumsId}}</a>&nbsp;>&nbsp;
+            </span>
+            <span ng-if="vm.thread">{{vm.thread.title}}</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="theme-header">
+            <div class="row">
+                <div class="col-xs-12 col-md-11">
+                    <h2 class="theme-title">{{vm.thread.title}}</h2>
+                    <!--<h5 class="theme-location">{{vm.thread.section | forumsId}}</h5>-->
+                </div>
+            </div>
+            <div class="theme-reply-item theme-content author">
+                <div class="row">
+                    <div class="col-xs-2 col-md-1">
+                        <div class="author-avatar">
+                            <img ng-src="{{vm.thread.creator.avatarUrl}}" width="70" height="70" />
+                        </div>
+                    </div>
+                    <div class="col-xs-10 col-md-11">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-1">
+                                <div class="row">
+                                    <div class="theme-reply-item-author">
+                                        <span class="author-name">{{vm.thread.authorName}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2 pull-right">
+                                <div class="row">
+                                    <div class="theme-publish-date">{{vm.thread.createDate | date: 'yyyy年MM月dd日 HH时mm分'}}</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9">
+                                <div class="theme-reply-item-content">
+                                    <div>{{vm.thread.content}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-1">
+                    <div class="header-reply-author">
+                        <a class="forums-theme-reply-btn pull-left" ng-click="vm.replyAuthor()">{{vm.isShowBox?'收起': '回复'}}</a>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="vm.isShowBox">
+                <a name="reply_author"></a>
+                <h2>回复楼主</h2>
+                <!--<reply-text-box ng-if="vm.thread" level="1" thread-id="vm.thread.id"></reply-text-box>-->
+                <div class="text-angular-box" style="width:75%">
+                    <text-angular
+                        ta-toolbar="[['h1','h2','h3'], ['bold', 'italics', 'underline','strikeThrough', 'insertImage', 'insertLink'], ['ul', 'ol', 'redo', 'undo', 'clear']]"
+                        ta-text-editor-class="form-content" ng-model="vm.replyContent"
+                        id="tournament-editor-text"></text-angular>
+                    <button class="submit-button btn-primary" style="" ng-click="vm.submit()">发表</button>
+                </div>
+                <!--<div ng-bind-html="vm.replyok"></div>-->
+            </div>
+
+        </div>
+        <div class="theme-body">
+            <thread-reply-item thread-id="vm.thread.id" post="post" ng-repeat="post in vm.postAll"></thread-reply-item>
+            <div class="forums-page-selection">
+                <button class="forums-next-page-btn" type="button" ng-click="vm.lastPage()" ng-disabled="vm.isFirst">&lt;上一页</button>&nbsp;&nbsp;
+                <span>{{vm.page}}</span>&nbsp;&nbsp;
+                <button class="forums-next-page-btn" type="button" ng-click="vm.nextPage()" ng-disabled="vm.isLast">下一页&gt;</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,117 @@
+<div class="content-wraper">
+    <h1 class="header-title">所有帖子</h1>
+    <div class="col-xs-6">
+        <button type="submit" ng-click="vm.confirmDelete()" class="btn btn-danger btn-sm">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+            <span class="hidden-xs hidden-sm ng-scope" data-translate="entity.action.delete">删除</span>
+        </button>
+        <button type="submit" ng-click="vm.confirmTop()" class="btn btn-sm btn-primary" id="colorPicker">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+            <span class="hidden-xs hidden-sm ng-scope">置顶</span>
+        </button>
+        <button type="submit" ng-click="vm.cancelTop()" class="btn btn-sm btn-warning">
+            <span class="glyphicon glyphicon-arrow-down"></span>
+            <span class="hidden-xs hidden-sm ng-scope">取消置顶</span>
+        </button>
+    </div>
+    <div class="goPages-article">
+        <button class="prev-page btn btn-success " ng-click="vm.loadPage(vm.page-1)" ng-disabled="vm.page < 2">
+            <span class="screen-reader-text">上一页</span><span aria-hidden="true">&lt;</span>
+        </button>
+        <form class="form-inline postArticle-form">
+            <div class="form-group">
+                <div class="input-group prev-page">
+                    <div class="input-group-addon">第</div>
+                    <input class="current-page" ng-keyup="$event.keyCode == 13 && vm.loadPage(vm.inputValue)"
+                           type="number"
+                           min="1" ng-model="vm.inputValue" value="{{vm.page}}" aria-describedby="table-paging">
+                    <div class="input-group-addon">页</div>
+                </div>
+            </div>
+        </form>
+        <button class="prev-page btn  btn-success" ng-click="vm.loadPage(vm.page+1)"
+                ng-disabled="vm.normalThreadList.length < 10">
+            <span class="screen-reader-text">下一页</span><span aria-hidden="true">&gt;</span>
+        </button>
+    </div>
+
+    <table class="jh-table table newsList">
+        <thead>
+        <tr jh-sort="vm.predicate" ascending="vm.reverse" class="ng-isolate-scope">
+            <th></th>
+            <th jh-sort-by="id"><span class="ng-scope">ID</span> <span
+                class="glyphicon glyphicon-sort"></span></th>
+            <th><span class="ng-scope">Title</span></th>
+            <th><span class="ng-scope">Name</span></th>
+            <th><span class="ng-scope">Author Name</span></th>
+            <th jh-sort-by="createDate"><span class="ng-scope">Create Date</span>
+                <span class="glyphicon glyphicon-sort"></span></th>
+            <th jh-sort-by="editDate"><span class="ng-scope">Edit Date</span> <span
+                class="glyphicon glyphicon-sort"></span></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="thread in vm.topThreadList | orderBy:vm.predicate:(vm.reverse?'':'desc') track by thread.id" class="ng-scope" ng-init="thread.isSelected=''">
+            <td class="text-left">
+                <div class="btn-group flex-btn-group-container">
+                    <!--&lt;!&ndash;<button type="submit" ui-sref="article-detail({id:article.id})" class="btn btn-info btn-sm"&ndash;&gt;-->
+                    <!--&lt;!&ndash;href="#/article/1">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="glyphicon glyphicon-eye-open"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="hidden-xs hidden-sm ng-scope" data-translate="entity.action.view">查看</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button type="submit" ui-sref="article.edit({id:article.id})" class="btn btn-primary btn-sm"&ndash;&gt;-->
+                    <!--&lt;!&ndash;href="#/article/1/edit?sort=authorName%2Cdesc">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="glyphicon glyphicon-pencil"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="hidden-xs hidden-sm ng-scope" data-translate="entity.action.edit">编辑</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button type="submit" ng-click="vm.confirmDelete(article.id)" class="btn btn-danger btn-sm">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="glyphicon glyphicon-remove-circle"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="hidden-xs hidden-sm ng-scope" data-translate="entity.action.delete">删除</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                    <input type="checkbox" ng-model="thread.isSelected">
+                </div>
+            </td>
+            <td><a ui-sref="#">{{thread.id}}</a></td>
+            <td style="color:red">{{thread.title}}</td>
+            <td>{{thread.name}}</td>
+            <td>{{thread.authorName}}</td>
+            <td>{{thread.createDate | date:'yyyy/MM/dd HH:mm'}}</td>
+            <td>{{thread.editDate | date:'yyyy/MM/dd HH:mm'}}</td>
+
+
+        </tr>
+        <tr ng-repeat="thread in vm.normalThreadList | orderBy:vm.predicate:(vm.reverse?'':'desc') track by thread.id" class="ng-scope"
+            ng-init="thread.isSelected=''">
+            <td class="text-left">
+                <div class="btn-group flex-btn-group-container">
+                    <!--<button type="submit" ui-sref="article-detail({id:article.id})" class="btn btn-info btn-sm"-->
+                    <!--href="#/article/1">-->
+                    <!--<span class="glyphicon glyphicon-eye-open"></span>-->
+                    <!--<span class="hidden-xs hidden-sm ng-scope" data-translate="entity.action.view">查看</span>-->
+                    <!--</button>-->
+                    <!--<button type="submit" ui-sref="article.edit({id:article.id})" class="btn btn-primary btn-sm"-->
+                    <!--href="#/article/1/edit?sort=authorName%2Cdesc">-->
+                    <!--<span class="glyphicon glyphicon-pencil"></span>-->
+                    <!--<span class="hidden-xs hidden-sm ng-scope" data-translate="entity.action.edit">编辑</span>-->
+                    <!--</button>-->
+                    <!--<button type="submit" ng-click="vm.confirmDelete(article.id)" class="btn btn-danger btn-sm">-->
+                    <!--<span class="glyphicon glyphicon-remove-circle"></span>-->
+                    <!--<span class="hidden-xs hidden-sm ng-scope" data-translate="entity.action.delete">删除</span>-->
+                    <!--</button>-->
+                    <input type="checkbox" ng-model="thread.isSelected">
+                </div>
+            </td>
+            <td><a ui-sref="#">{{thread.id}}</a></td>
+            <td id="title{{$index}}" ng-style="thread">{{thread.title}}</td>
+            <td>{{thread.name}}</td>
+            <td>{{thread.authorName}}</td>
+            <td>{{thread.createDate | date:'yyyy/MM/dd HH:mm'}}</td>
+            <td>{{thread.editDate | date:'yyyy/MM/dd HH:mm'}}</td>
+
+
+        </tr><!-- end ngRepeat: article in vm.articles track by article.id -->
+        </tbody>
+    </table>
+</div>
+

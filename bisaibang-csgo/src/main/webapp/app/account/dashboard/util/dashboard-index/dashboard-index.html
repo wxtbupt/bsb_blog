@@ -1,0 +1,59 @@
+<div class="per">
+    <span>
+    <!--您可以点击左边标签-->
+    <br>
+        <!--对仪表盘进行修改操作-->
+    <br>
+    1、注册用户数量: {{vm.content.resource.userNumber}}
+    <br>
+    2、绑定战网ID的用户数量: {{vm.content.resource.nickNameNumber}}
+    <br>
+    3、满足6个人组建成队的数量: {{vm.content.resource.rNumber}}
+    <br>
+</span>
+
+    <div class="form-group dashboard-phone">
+        手机号:
+        <input type="text" class="form-control dashboard-phone-input" ng-model="vm.phone" >
+        <span>
+            <button class="btn" ng-click="vm.taskRemove(vm.phone)" disabled>解除</button>
+        </span>
+    </div>
+</div>
+
+<!--<div class="form-group dashboard-phone">
+    战网id:
+    <input type="text" class="form-control dashboard-phone-input" ng-model="vm.zhanwangid" >
+    <span>
+        <button class="btn" ng-click="vm.teamRemove(vm.zhanwangid)">解散小队</button>
+    </span>
+</div>-->
+
+<div class="form-group dashboard-phone per">
+    r的id:
+    <input type="text" class="form-control dashboard-phone-input" ng-model="vm.card.registration.id" >
+    <!--<textarea name="" id="" cols="30" rows="10" ng-model="vm.card.content"></textarea>-->
+    <span class=" dashboard-score-input">topTeam</span>
+    <span class=" dashboard-score-input">topScore</span>
+
+    <span class=" dashboard-score-input">bottomScore</span>
+    <span class=" dashboard-score-input">bottomTeam</span>
+    <br>
+    <input type="text" class="form-control dashboard-score-input" ng-model="vm.topTeam">
+    <input type="text" class="form-control dashboard-score-input" ng-model="vm.topScore">
+    :
+    <input type="text" class="form-control dashboard-score-input" ng-model="vm.bottomScore">
+    <input type="text" class="form-control dashboard-score-input" ng-model="vm.bottomTeam">
+    <div>
+        <button class="btn" ng-click="vm.createCard()">创建card</button>
+    </div>
+</div>
+
+
+<div class="form-group dashboard-phone per">
+    cardID:
+    <input type="text" class="form-control dashboard-phone-input" ng-model="vm.cardId" >
+    <span>
+        <button class="btn" ng-click="vm.cardRemove(vm.cardId)">删除card</button>
+    </span>
+</div>

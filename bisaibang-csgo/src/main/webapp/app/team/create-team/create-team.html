@@ -1,0 +1,20 @@
+<home-menu></home-menu>
+<div class="create-team">
+    <div class="create-team-title">
+        <div class="create-team-line"></div>
+        填写队伍信息
+        <div class="create-team-line"></div>
+    </div>
+    <div class="create-team-name create-team-input">
+        队 伍 名 称<input ng-model="vm.teamName" placeholder="请输入战队名称"/>
+    </div>
+    <div class="create-team-warn" ng-if="vm.warn">
+        *请填写队伍完整信息
+    </div>
+    <div class="create-team-warn create-team-warn-length" ng-if="vm.lengthWarn">
+        *队伍名请小于16个字符
+    </div>
+    <div class="create-team-btn" ng-click="vm.createTeam()">
+        创建队伍
+    </div>
+</div>

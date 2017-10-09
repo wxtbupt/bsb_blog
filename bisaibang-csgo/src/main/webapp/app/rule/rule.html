@@ -1,0 +1,16 @@
+<div ng-cloak>
+    <home-menu></home-menu>
+    <div ng-class="{'rule-competition':vm.showCompetition,'rule-rules': !vm.showCompetition}">
+        <!--<div class="rule-time-header"></div>-->
+        <!--<div class="rule-time-content"></div>-->
+        <div class="rule-tabs">
+            <div ng-class="{'rule-tab1-active':vm.showCompetition,'rule-tab1': !vm.showCompetition}" ng-click="vm.toShowGameSystem()"></div>
+            <!--<div ng-class="{'rule-tab2':vm.showCompetition,'rule-tab2-active': !vm.showCompetition}" ng-click="vm.showCompetition=!vm.showCompetition"></div>-->
+            <div ng-class="{'rule-tab2':vm.showCompetition,'rule-tab2-active': !vm.showCompetition}" ng-click="vm.toShowRuleContent()"></div>
+        </div>
+        <game-system ng-class="{'rule-show':!vm.toShow}"></game-system>
+        <rule-content ng-class="{'rule-show':vm.toShow}"></rule-content>
+
+    </div>
+</div>
+<home-footer></home-footer>

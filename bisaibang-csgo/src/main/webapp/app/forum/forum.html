@@ -1,0 +1,128 @@
+<!-- https://www.battlenet.com.cn/forums/zh/bnet/9318529/ -->
+<div ng-cloak>
+    <div class="form-home-menu">
+        <home-menu></home-menu>
+    </div>
+</div>
+<div class="outsource-forum">
+    <div class="container">
+        <div class="forums-general-header">
+            <div class="station-tournament-icon-wrapper">
+                <img class="station-tournament-icon" src="/content/images/station/station-forum-tip.png">
+            </div>
+            <span class="forums-general-title">讨论区</span>
+            <div class="forums-theme-post-btn" ng-click="vm.createThread()">
+                <span>发帖</span>
+            </div>
+        </div>
+        <!--<div class="forums-new-theme" ng-show="vm.createNewTheme">
+            <form name="form">
+                <h2 class="new-theme-header">
+                    <span>新主题</span>
+                    <a href="" class="cancel-btn pull-right" ng-click="vm.cancelNewTheme()">x</a>
+                </h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="theme-reply-item-author clearfix">
+                            <div class="author-avatar">
+                                <img ng-src="{{vm.avatarUrl}}" alt="">
+                            </div>
+                            <div class="author-detail">
+                                <span class="author-name">{{vm.authorName? vm.authorName: '未登录'}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="new-theme-content">
+                            <div class="forbidden-tip" ng-hide="true">你没有在此论坛发帖的权限。</div>
+                            <div ng-hide="false">
+                                <div class="new-theme-content-input-wrapper">
+                                    <span>文章标题：</span>
+                                    <input type="text" class="new-theme-content-input" ng-model="vm.thread.title"
+                                           required>
+                                </div>
+                                <div class="new-theme-content-input-wrapper">
+                                    <span>文章内容：</span>
+                                    <textarea class="new-theme-content-input thread-content"
+                                              ng-model="vm.thread.content" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="pull-right publish-theme-btn" type="button" ng-click="vm.publishThread()"
+                            ng-disabled="form.$invalid">发表
+                    </button>
+                    &lt;!&ndash;<button class="pull-right publish-theme-btn" type="button" ng-click="vm.autoTest()">发表50个</button>&ndash;&gt;
+                </div>
+            </form>
+        </div>-->
+        <div class="form-general-content">
+            <div class="form-container">
+                <table>
+                    <thead>
+                    <tr class="form-general-content-header">
+                        <td class="forums-col-title text-left">标题</td>
+                        <td class="forums-col-author">发帖人</td>
+                        <td class="forums-col-reply">评论数</td>
+                        <!-- <td class="forums-col-reply-name">回复名称（不要）</td>-->
+                        <td class="forums-col-date">发表时间</td><!--（现在是回复时间）!!!!!!-->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- 置顶帖子 -->
+                    <!--id是小站id,threadid是帖子id-->
+                    <tr class="article-item"
+                        ng-repeat="thread in vm.markThreadList">
+                        <td class="forums-col-title text-left">
+                            <span class="article-title isTop"
+                                  ui-sref="station-forum-thread({id:vm.forumId,threadid: thread.id})">[置顶]&nbsp;{{thread.title.slice(0,30) + (!thread.title.slice(30)? '' : '...')}}</span>
+                        </td>
+                        <td class="forums-col-author"><span class="article-publisher">{{thread.creator.nickName.slice(0,8) + (!thread.creator.nickName.slice(8) ? '' : '...') || thread.creator.phone}}</span>
+                        </td>
+                        <td class="forums-col-reply"><span class="article-reply">{{thread.postNum}}</span></td>
+                        <td class="forums-col-date"><span class="forums-col-date">{{thread.editDate | date:'yyyy/MM/dd HH:mm'}}</span>
+                        </td>
+                    </tr>
+                    <!-- 普通帖子 -->
+                    <!--id是小站id,threadid是帖子id-->
+                    <tr class="article-item"
+                        ng-repeat="thread in vm.threadList">
+                        <td class="forums-col-title text-left">
+                            <span class="article-title"
+                                  ui-sref="station-forum-thread({id:vm.forumId,threadid: thread.id})">{{thread.title.slice(0,30) + (!thread.title.slice(30)? '' : '...')}}</span>
+                        </td>
+                        <td class="forums-col-author"><span class="article-publisher">{{thread.creator.nickName.slice(0,8) + (!thread.creator.nickName.slice(8) ? '' : '...') || thread.creator.phone}}</span>
+                        </td>
+                        <td class="forums-col-reply"><span class="article-reply">{{thread.postNum}}</span></td>
+                        <td class="forums-col-date"><span class="forums-col-date">{{thread.editDate | date:'yyyy/MM/dd HH:mm'}}</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--<div class="theme-page-section">
+                <div class="selection-container">
+                    <button class="forums-next-page-btn" type="button" ng-click="vm.pageChange(-1)">上一页
+                    </button>&nbsp;&nbsp;
+                    <span class="page-number">{{vm.page}}</span>&nbsp;&nbsp;
+                    <button class="forums-next-page-btn" type="button" ng-click="vm.pageChange(1)" ng-disabled="vm.isLast">
+                        下一页
+                    </button>
+                    <div class="page-input">
+                        <span>到</span><input type="text" ng-model="vm.toPageNumber"><span>页</span>
+                    </div>
+                    <button ng-click="vm.toPage()">确定</button>
+                </div>
+            </div>-->
+            <news-page-num ng-show="vm.totalPages > 1" total-pages="vm.totalPages"
+                           to-page="vm.toPage(page)"></news-page-num>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer" ng-cloak>
+    <span>新页脚</span>
+</div>

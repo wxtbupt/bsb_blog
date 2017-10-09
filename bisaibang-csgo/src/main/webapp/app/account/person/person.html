@@ -1,0 +1,61 @@
+<div class="personInfo" ng-hide="!vm.isLogIn">
+    <div class="form-home-menu">
+        <home-menu></home-menu>
+    </div>
+    <div class="personInfo-logo"><img src="/content/images/person/l1ogo.png" alt=""></div>
+    <div class="personInfo-title"><span class="line"></span>&nbsp;&nbsp;个人信息&nbsp;&nbsp;<span class="line"></span></div>
+    <div class="personInfo-pi">
+        <img class="personInfo-pi-img" ng-click="vm.changeAvatar()" ng-src="{{vm.personInfo.avatarUrl}}" width="80"
+             height="80">
+        <div class="personInfo-pi-info">
+            <div class="personInfo-item">
+                <span class="personInfo-item-span">姓名:</span>
+                <input class="form-control personInfo-item-input" type="text" ng-model="vm.personInfo.firstName"
+                       placeholder="请输入姓名">
+            </div>
+            <div class="personInfo-item">
+                <span class="personInfo-item-span">身份证号:</span>
+                <input class="form-control personInfo-item-input" type="text" ng-model="vm.personInfo.personalID"
+                       placeholder="请输入身份证号"/>
+            </div>
+            <div class="personInfo-item">
+                <span class="personInfo-item-span">邮箱:</span>
+                <input class="form-control personInfo-item-input" type="text" ng-model="vm.personInfo.personalEmail"
+                       placeholder="请输入邮箱"/>
+            </div>
+            <div class="personInfo-item">
+                <!--{{ vm.personInfo.phone }} {{vm.isBindNickName ? '（已绑定）' : ''}}-->
+                <span class="personInfo-item-span">手机号:</span>
+                {{ vm.personInfo.phone }} {{vm.isBindNickName ? '（已绑定）' : ''}}
+                <!--<input style="display: inline;width: 60%" class="form-control" type="text" ng-model="vm.personInfo.phone"/>-->
+            </div>
+
+            <div class="personInfo-item">
+                <span class="personInfo-item-span">战网ID:</span>
+                {{ vm.isBindNickName ? vm.personInfo.nickName : '未绑定'}}
+                <button class="ow-register-submit btn" ng-click="vm.bindNickName()" ng-hide="vm.isBindNickName"
+                        ng-disabled="!vm.regIDCard(vm.personInfo.personalID)||!vm.regEmail(vm.personInfo.personalEmail)||!vm.regName(vm.personInfo.firstName)">
+                    绑定
+                </button>
+                <button class="ow-register-submit btn" ng-show="vm.isBindNickName && !vm.isRegistration" ng-click="vm.removeBind()">解绑</button>
+            </div>
+            <div class="personInfo-pi-info-tips">绑定前请先确认<a href="http://www.battlenet.com.cn">战网网页</a>中登陆账号与绑定账号一致</div>
+            <div class="text-center">
+                <button class="ow-register-submit btn" ng-click="vm.updatePersonInfo()"
+                        ng-disabled="!vm.regIDCard(vm.personInfo.personalID)||!vm.regEmail(vm.personInfo.personalEmail) ||!vm.regName(vm.personInfo.firstName) "
+                        style="opacity:1;">保存
+                </button>
+
+
+                <!--<button class="ow-register-submit btn" ng-click="vm.bindNickName()" ng-hide="vm.isBindNickName"
+                        ng-disabled="!vm.regIDCard(vm.newPersonInfo.idCard)||!vm.regEmail(vm.newPersonInfo.email)||!vm.regName(vm.newPersonInfo.name)">绑定</button>
+                <div class="personInfo-pi-info-tips" ng-hide="vm.isBindNickName">（点击 “绑定” 按钮，在暴雪官网中登录战网账号，使手机号和战网ID绑定）</div>-->
+                <div class="personInfo-pi-info-tips">截至9月6日10：00前，选手可自由修改个人报名信息</div>
+            </div>
+
+            <!--!vm.regIDCard(vm.newPersonInfo.idCard)||!vm.regEmail(vm.newPersonInfo.email)||!vm.regName(vm.newPersonInfo.name)||!vm.isCreatePersonInfo-->
+        </div>
+    </div>
+</div>
+<h1 ng-hide="vm.isLogIn" style="text-align: center;color: #fff">请先登录</h1>
+<home-footer></home-footer>
