@@ -10,7 +10,7 @@
                         </div>
                         <h3>{{article.title}}12319859sdfsdfsdfsdfdfdf9</h3>
                         <div class="item-content">
-                            <p>{{articleDescriptions}}</p>
+                            <p>{{article.description}}</p>
                         </div>
                         <div class="item-footer">
                             <div class="entry-category">from {{article.authorName}}</div>
@@ -23,6 +23,15 @@
                     </div>
                 </li>
             </ul>
+            <div class="news-list-scroll" ng-hide="vm.size == vm.articles.length" ng-click="vm.loadArticle()">
+                下拉加载更多
+                <!--<div class="news-list-arrow">
+                    <span></span>
+                </div>-->
+            </div>
+
+
+
         </div>
     </div>
 </div>

@@ -1,38 +1,11 @@
 <nav>
     <div class="home-menu-wrap">
         <div class="home-menu" ng-switch="vm.isAuthenticated()">
-            <img src="/content/images/csgo-logo.png" alt="">
             <div class="home-menu-nav">
                 <a ui-sref="home"
                    ng-class="{'home-menu-nav-active':vm.activeItem == 'home'}">
                     官方首页<br/>
                     <span>HOME</span>
-                </a>
-                <span class="home-menu-line">/</span>
-                <a>
-                    赛制规则<br/>
-                    <span>RULES</span>
-                </a>
-                <span class="home-menu-line">/</span>
-                <a>
-                    积分排名<br/>
-                    <span>SCORE</span>
-                </a>
-                <span class="home-menu-line">/</span>
-                <a ui-sref="news-list"
-                   ng-class="{'home-menu-nav-active':vm.activeItem == 'news-list' || vm.activeItem == 'news-page'}">
-                    赛事资讯<br/>
-                    <span>NEWS</span>
-                </a>
-                <span class="home-menu-line">/</span>
-                <a>
-                    精彩视频<br/>
-                    <span>VIDEOS</span>
-                </a>
-                <span class="home-menu-line">/</span>
-                <a>
-                    精彩图集<br/>
-                    <span>ATLAS</span>
                 </a>
             </div>
             <div class="home-menu-register" ng-hide="vm.isAuthenticated()">
@@ -150,7 +123,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><a ui-sref="competingInfo">我的参赛信息</a></li>
+                <!--<li><a ui-sref="competingInfo">我的参赛信息</a></li>-->
                 <li><a ng-click="vm.logout()">注销</a></li>
             </ul>
         </div>

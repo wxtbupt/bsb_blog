@@ -208,7 +208,7 @@
 }
 
 .csgo-home {
-    background-image: url(/content/images/home/home-csgo/guanjun.png);
+    /*ackground-image: url(/content/images/home/home-csgo/guanjun.png);*/
     background-position-x: center;
     background-position-y: -305px;
     background-repeat: no-repeat;
@@ -218,7 +218,7 @@
 .home-banner {
     height: 487px;
     padding-bottom: 18px;
-    background-image: url(/content/images/home/home-csgo/csgo-banner.jpg);
+    /*background-image: url(/content/images/home/home-csgo/csgo-banner.jpg);*/
     background-position: top center;
 }
 
@@ -354,6 +354,9 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     text-align: center;
+}
+.home-card .item .item-content p {
+    text-align: left;
 }
 .home-card .item-footer {
     position: relative;
