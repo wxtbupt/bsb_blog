@@ -80,7 +80,7 @@
 }
 
 .home-menu-nav {
-    width: 600px;
+    /*width: 600px;*/
     height: 40px;
     line-height: 20px;
     margin-left: 50px;
@@ -162,13 +162,17 @@
 }
 
 .footer .container {
-    /*width: 1220px;*/
+    /*!*width: 1220px;*!*/
     height: 100%;
     margin: 0 auto;
     line-height: 200px;
 }
+.footer-info span {
+    font-size: 14px;
+    color: #b3b3b3;
+}
 
-.footer-company-logo {
+/*.footer-company-logo {
     height: 60px;
 }
 
@@ -188,12 +192,9 @@
 .footer-info p, .footer-info a {
     font-size: 25px;
     color: #fff;
-}
+}*/
 
-.footer-info span {
-    font-size: 14px;
-    color: #b3b3b3;
-}
+
 
 /*新版csgo的首页*/
 .text-linear {
@@ -254,7 +255,6 @@
 }
 /*-------*/
 .home-introduce {
-    height: 2100px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;

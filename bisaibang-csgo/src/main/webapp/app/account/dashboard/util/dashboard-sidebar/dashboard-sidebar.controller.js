@@ -16,12 +16,7 @@
         vm.clearVideoData = clearVideoData;
         vm.clearArticleData = clearArticleData;
         vm.tabs = [
-            ['postArticle', 'manageArticle', 'manageComment'],
-            ['postVideo', 'manageVideo', 'addVideoTag'],
-            ['manageCommunicateSection', 'manageGameMatchSection', 'manageComplaintSection'],
-            ['checkList', 'deleteTeam', 'changeName'],
-            ['pushArticle', 'pushSchedule'],
-            ['markUser']
+            'createBlog', 'pushSchedule'
         ];
 
         // GetAllVideoTag.get(function (result) {
@@ -83,12 +78,10 @@
             };
         }
         function findPath(){
-            vm.tabs.forEach(function (item, index) {
-                item.forEach(function (tab, tabIndex) {
-                    if(vm.selectedTab == tab){
-                        $('.panel-collapse').eq(index).addClass('in');
-                    }
-                })
+            vm.tabs.forEach(function (tab, index) {
+                if(vm.selectedTab == tab){
+                    $('.panel-collapse').eq(index).addClass('in');
+                }
             })
         }
         findPath();

@@ -28,7 +28,7 @@
             saveHTMLToTextarea : true,
             onload : function() {
                 // alert("onload");
-                this.setMarkdown("### okeyidengyis");
+                this.setMarkdown("# 欢迎使用比赛帮Blog编辑器");
                 // console.log("onload =>", this, this.id, this.settings);
             }
         });
