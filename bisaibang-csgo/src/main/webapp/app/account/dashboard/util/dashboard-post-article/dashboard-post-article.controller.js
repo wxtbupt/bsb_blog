@@ -89,8 +89,10 @@
                     console.log(data)
                     vm.article = data;
                     vm.title = data.title;
-                    /*vm.createDate = data.createDate.toLocaleString();*/
                     vm.content = data.content;
+                    setTimeout(function () {
+                        window.location.href="/dashboard/manageArticle";
+                    },300);
                 }, function onError(error) {
                     toaster.pop('error', " ", '失败');
                 });
