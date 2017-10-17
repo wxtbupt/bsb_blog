@@ -8,9 +8,9 @@
         .module('bsbmsoneApp')
         .controller('DashboardPostArticleController', DashboardPostArticleController);
 
-    DashboardPostArticleController.$inject = ['GetHomePage', 'CreateArticle', 'toaster', 'AvatarUploadService'];
+    DashboardPostArticleController.$inject = ['GetHomePage', 'CreateArticle', 'toaster', 'AvatarUploadService', 'EditArticle'];
 
-    function DashboardPostArticleController(GetHomePage, CreateArticle, toaster, AvatarUploadService) {
+    function DashboardPostArticleController(GetHomePage, CreateArticle, toaster, AvatarUploadService, EditArticle) {
         var vm = this;
 
         var articleIdStr = "";
@@ -77,10 +77,25 @@
             vm.article.description = editor.getMarkdown()
             vm.article.introduction = editor.getMarkdown()
             vm.article.authorName = "比赛帮RD";
-            CreateArticle.save(vm.article,function (res) {
-                console.log(res)
-            })
 
+            if (!vm.article.id && typeof (vm.article.id)!="undefined" && vm.article.id!=0){
+                CreateArticle.save(vm.article,function (res) {
+                    console.log(res)
+                })
+            } else {
+
+                EditArticle.save({articleid:vm.article.id},vm.article, function onSuccess(data){
+                    toaster.pop('success', " ", '已成功');
+                    console.log(data)
+                    vm.article = data;
+                    vm.title = data.title;
+                    /*vm.createDate = data.createDate.toLocaleString();*/
+                    vm.content = data.content;
+                }, function onError(error) {
+                    toaster.pop('error', " ", '失败');
+                });
+
+            }
         }
         function getMD() {
             console.log(editor.getMarkdown());

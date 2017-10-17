@@ -38,12 +38,10 @@
             <th jh-sort-by="title"><span class="ng-scope">Description</span></th>
             <th jh-sort-by="authorName"><span class="ng-scope">Author Name</span>
                 <span class="glyphicon glyphicon-sort-by-attributes-alt"></span></th>
-            <th jh-sort-by="createDate"><span class="ng-scope">Create Date</span>
+            <th jh-sort-by="createDate"><span class="ng-scope">更改时间</span>
                 <span class="glyphicon glyphicon-sort"></span></th>
-            <th jh-sort-by="commentNumber"><span class="ng-scope">管理评论</span> <span
-                class="glyphicon glyphicon-sort"></span></th>
-            <!--<th jh-sort-by="state"><span class="ng-scope">State</span> <span
-                class="glyphicon glyphicon-sort"></span></th>
+            <!--<th jh-sort-by="commentNumber"><span class="ng-scope">管理评论</span> <span
+                class="glyphicon glyphicon-sort"></span></th>-->
             <th jh-sort-by="creator.id"><span class="ng-scope">Creator</span> <span
                 class="glyphicon glyphicon-sort"></span></th>
             <!--<th jh-sort-by="setNews"><span class="ng-scope">设置首页新闻</span> <span-->
@@ -62,10 +60,9 @@
             <td><a ng-click="vm.gotoEdit(article)">{{article.title}}</a></td>
             <td><a ng-click="vm.gotoEdit(article)">{{article.description}}</a></td>
             <td>{{article.creator.nickName || article.creator.phone}}</td>
-            <td><a ng-click="vm.gotoEdit(article)">{{article.createDate | date:'yyyy/MM/dd HH:mm'}}</a></td>
-            <td ng-click="vm.deleteComment(article)"><button class="btn">{{article.commentNumber}}</button></td>
-            <!--<td>{{article.state}}</td>
-            <td>{{article.creator}}</td>
+            <td><a ng-click="vm.gotoEdit(article)">{{article.editDate | date:'yyyy/MM/dd HH:mm'}}</a></td>
+            <!--<td ng-click="vm.deleteComment(article)"><button class="btn">{{article.commentNumber}}</button></td>-->
+            <!-- <td>{{article.creator}}</td>
             <!--<td><button class="orange-button" ng-click="vm.setHomeNews()">点我</button></td>-->
 
         </tr><!-- end ngRepeat: article in vm.articles track by article.id -->
