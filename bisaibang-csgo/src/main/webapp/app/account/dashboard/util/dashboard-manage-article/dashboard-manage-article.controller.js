@@ -89,6 +89,9 @@
             function onSuccess(data, headers) {
                 //vm.links = ParseLinks.parse(headers('link'));
                 vm.articles = data.content;
+                vm.articles.forEach(function (item) {
+                    // item.description = item.content.replace(/<\/?.+?>/g,"").slice(0,10)+"...";
+                });
             }
 
             function onError(error) {

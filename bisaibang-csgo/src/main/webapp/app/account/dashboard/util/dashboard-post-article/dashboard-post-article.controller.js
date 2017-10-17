@@ -8,12 +8,20 @@
         .module('bsbmsoneApp')
         .controller('DashboardPostArticleController', DashboardPostArticleController);
 
-    DashboardPostArticleController.$inject = ['EditArticle', 'CreateArticle', 'toaster', 'AvatarUploadService'];
+    DashboardPostArticleController.$inject = ['GetHomePage', 'CreateArticle', 'toaster', 'AvatarUploadService'];
 
-    function DashboardPostArticleController(EditArticle, CreateArticle, toaster, AvatarUploadService) {
+    function DashboardPostArticleController(GetHomePage, CreateArticle, toaster, AvatarUploadService) {
         var vm = this;
-        vm.upload = Upload;
-        vm.confirmEdit = confirmEdit;
+
+        var articleIdStr = "";
+        vm.thumbnailUrl = "";
+        vm.content = "";
+
+        vm.getHtml = getHtml;
+        vm.getMD = getMD;
+
+        getHomePage();
+        console.log(vm.article);
         if (vm.article == undefined || vm.article == null || vm.article.id == null){
             //若修改vm.article初始化数据，请在dashboard-sidebar.controller.js中同时进行修改
             vm.article = {
@@ -40,61 +48,48 @@
             isConfirmEditButtonShow: true
         };
 
-        function Upload() {
-            //vm.thumbnailUploadStatus = '正在上传，请稍后';
-            AvatarUploadService.open("ArticleImage", {aspectRatio: 16 / 9, compress: true, width:260},
-                function (result) {
-                    if (result) {
-                        vm.article.thumbnailUrl = 'https://msone.bisaibang.com/' + result;
-                        vm.thumbnailUploadStatus = '上传成功';
-                    }
-                }, function () {
-                    vm.thumbnailUploadStatus = '发生虾米事情了?上传未成功';
-                });
+        var editor = editormd("editormd", {
+            path : "bower_components/editor.md/lib/", // Autoload modules mode, codemirror, marked... dependents libs path
+            saveHTMLToTextarea : true,
+            onload : function() {
+                // alert("onload");
+                this.setMarkdown(vm.article.introduction || "# 欢迎使用比赛帮Blog编辑器");
+                // console.log("onload =>", this, this.id, this.settings);
+            }
+        });
+
+
+
+         /*得到所有首页新闻id*/
+        function getHomePage() {
+            GetHomePage.get(function (response) {
+                articleIdStr = response.article_config;
+            }, function (err) {
+
+            })
         }
 
-        // 确认编辑
-        function confirmEdit() {
-            openHtmlShow(vm.note);
-            submit();
+        // /*发送新闻id 使articleIdStr存储的id永远是6个*/
+        function getHtml() {
+            console.log(editor.getHTML());
+            vm.content = editor.getHTML();
+            vm.article.content = editor.getHTML();
+            vm.article.description = editor.getMarkdown()
+            vm.article.introduction = editor.getMarkdown()
+            vm.article.authorName = "比赛帮RD";
+            CreateArticle.save(vm.article,function (res) {
+                console.log(res)
+            })
+
+        }
+        function getMD() {
+            console.log(editor.getMarkdown());
+
         }
 
-        function openHtmlShow(object) {
-            object.isHtmlShow = false;
-            object.isEditShow = true;
-            object.isConfirmEditButtonShow = true;
-        }
-
-        function submit() {
-            if (vm.article.id == null)
-                CreateArticle.save(vm.article, function success(result) {
-                    toaster.pop('success', " ", '已成功');
-                    vm.article = {
-                        authorName: null,
-                        introduction: '',
-                        thumbnailUrl: '',
-                        content: '',
-                        contentContentType: null,
-                        createDate: new Date(),
-                        editDate: null,
-                        id: null,
-                        isAbandon: null,
-                        name: null,
-                        state: null,
-                        title: '',
-                        type: null,
-                        term:{id:1}
-                    };
-                }, function error(result) {
-                    toaster.pop('error', " ", '失败');
-                });
-            else
-                EditArticle.save({articleid:vm.article.id},vm.article, function success(result) {
-                    toaster.pop('success', " ", '已成功');
-                    vm.article = null;
-                }, function error(result) {
-                    toaster.pop('error', " ", '失败');
-                });
+        function delHtmlTag() {
+            //去掉所有的html标记
+            console.log(vm.content.replace(/<[^>]+>/g,""));
         }
     }
 })();
